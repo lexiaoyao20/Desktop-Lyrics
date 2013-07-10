@@ -47,6 +47,18 @@
     [super dealloc];
 }
 
+- (void)awakeFromNib {
+    [self.layer addSublayer:_lyricLayer];
+    _lyricLayer.frame = self.layer.frame;
+}
+
+- (void)drawRect:(NSRect)dirtyRect
+{
+    if (!_lyricString) {
+        return;
+    }
+}
+
 @dynamic lyricForegroundColor;
 
 - (NSColor *)lyricForegroundColor {
@@ -94,9 +106,10 @@
     if (mutaString==NULL) {
         mutaString = [[NSMutableAttributedString alloc] initWithString:lyricString];
     }
-    
+
     [mutaString addAttribute:NSForegroundColorAttributeName value:[NSColor whiteColor] range:NSMakeRange(0, len)];
     [mutaString addAttribute:NSLigatureAttributeName value:[NSNumber numberWithInt:0] range:NSMakeRange(0, len)];
+    [mutaString addAttribute:NSStrokeWidthAttributeName value:[NSNumber numberWithInt:-3] range:NSMakeRange(0, len)];
     CTFontRef fontRef = CTFontCreateWithName((CFStringRef)_lyricLayer.font, 
                                              _lyricLayer.fontSize,
                                              NULL);
@@ -110,6 +123,12 @@
         [_timer release];
         _timer = nil;
     }
+    
+//    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"foregroundColor"];
+//    [animation setFromValue:[NSColor whiteColor]];
+//    [animation setToValue:[NSColor orangeColor]];
+//    [animation setDuration:2];
+//    [_lyricLayer addAnimation:animation forKey:@"foregroundColor"];
     
     if (_timer == nil) {
         location = 0;
@@ -136,6 +155,7 @@
     [hilightString addAttribute:NSForegroundColorAttributeName
                           value:self.lyricKoroOKColor
                           range:NSMakeRange(0, 1)];
+    [hilightString addAttribute:NSStrokeWidthAttributeName value:[NSNumber numberWithInt:-3] range:NSMakeRange(0, 1)];
     CTFontRef ctFont2 = CTFontCreateWithName((CFStringRef)_lyricLayer.font, 
                                              _lyricLayer.fontSize,
                                              NULL);
@@ -157,18 +177,6 @@
 
 -(void)timerFired:(NSTimer*)timer {
     [self setNeedsDisplay:YES];
-}
-
-- (void)awakeFromNib {
-    [self.layer addSublayer:_lyricLayer];
-    _lyricLayer.frame = self.layer.frame;
-}
-
-- (void)drawRect:(NSRect)dirtyRect
-{
-    if (!_lyricString) {
-        return;
-    }
 }
 
 @end
