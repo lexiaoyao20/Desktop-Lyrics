@@ -133,10 +133,9 @@
     if (_timer == nil) {
         location = 0;
         _timer = [[NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(hilightcolortimer) userInfo:nil repeats:YES] retain];
+//        _timer = [[[NSTimer alloc] initWithFireDate:[NSDate date] interval:0.05 target:self selector:@selector(hilightcolortimer) userInfo:nil repeats:YES] retain];
+//        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
     }
-    
-//	timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:0.01 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
-//	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 }
 
 - (void)hilightcolortimer
