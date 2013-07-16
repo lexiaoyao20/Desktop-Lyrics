@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		931C8A8817954CD100B6F62F /* DLLyricsFloatWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 931C8A8417954CD100B6F62F /* DLLyricsFloatWindow.m */; };
+		931C8A8917954CD100B6F62F /* DLLyricsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 931C8A8717954CD100B6F62F /* DLLyricsView.m */; };
+		93243E1D178465D000B975E4 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93243E1C178465D000B975E4 /* ScriptingBridge.framework */; };
+		93243E2617846C9700B975E4 /* DLPreferenceWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93243E2517846C9700B975E4 /* DLPreferenceWindowController.m */; };
+		9326EF401785B62200F9069A /* DLiTunesControlNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 9326EF3B1785B62200F9069A /* DLiTunesControlNotifier.m */; };
+		9326EF411785B62200F9069A /* DLiTunesControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9326EF3E1785B62200F9069A /* DLiTunesControl.m */; };
+		9326EF481785BBB800F9069A /* StatusBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9326EF471785BBB800F9069A /* StatusBar.xib */; };
+		9326EF4B1785BCE800F9069A /* DLLyricsStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9326EF4A1785BCE800F9069A /* DLLyricsStatusBar.m */; };
+		93522464178AFFA0001DE7C4 /* LrcToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 9352245C178AFFA0001DE7C4 /* LrcToken.m */; };
+		93522465178AFFA0001DE7C4 /* LrcTokensPool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9352245E178AFFA0001DE7C4 /* LrcTokensPool.mm */; };
+		93522467178AFFA0001DE7C4 /* DLLyricsFloatWndController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93522463178AFFA0001DE7C4 /* DLLyricsFloatWndController.m */; };
+		9352246C178B001F001DE7C4 /* UniversalDetector.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 9352246B178B001F001DE7C4 /* UniversalDetector.framework */; };
+		9352246D178B002A001DE7C4 /* UniversalDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9352246B178B001F001DE7C4 /* UniversalDetector.framework */; };
+		9363D56417944EC600C37DAB /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9363D56317944EC600C37DAB /* About.xib */; };
+		9363D5681794569500C37DAB /* DLAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9363D5671794569500C37DAB /* DLAboutWindowController.m */; };
+		9395799F179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9395799E179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m */; };
+		93D2ECD9178F04B600B5C039 /* VOutTextRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2ECD8178F04B600B5C039 /* VOutTextRender.m */; };
+		93EC4B67178D9A5800DD5A7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC4B66178D9A5800DD5A7B /* QuartzCore.framework */; };
+		93EC4B6C178D9F8A00DD5A7B /* NSColor+CGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC4B6B178D9F8A00DD5A7B /* NSColor+CGColor.m */; };
+		93EC4B6E178DA47000DD5A7B /* FloatLyricWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93EC4B6D178DA47000DD5A7B /* FloatLyricWindow.xib */; };
+		93EC4B76178DAACD00DD5A7B /* DLLyricsStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC4B75178DAACD00DD5A7B /* DLLyricsStorage.m */; };
+		93EC4B7A178DBC7800DD5A7B /* DLDataDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC4B79178DBC7800DD5A7B /* DLDataDefine.m */; };
+		93F9F917178324CF00F553B0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F9F916178324CF00F553B0 /* Cocoa.framework */; };
+		93F9F921178324CF00F553B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93F9F91F178324CF00F553B0 /* InfoPlist.strings */; };
+		93F9F923178324CF00F553B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F9F922178324CF00F553B0 /* main.m */; };
+		93F9F927178324CF00F553B0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 93F9F925178324CF00F553B0 /* Credits.rtf */; };
+		93F9F92A178324CF00F553B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F9F929178324CF00F553B0 /* AppDelegate.m */; };
+		93F9F92D178324D000F553B0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93F9F92B178324D000F553B0 /* MainMenu.xib */; };
+		93FB21E817905AC500394BC2 /* DLLRCFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FB21E717905AC500394BC2 /* DLLRCFetcher.m */; };
+		93FB21EC17906A4A00394BC2 /* DLDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FB21EB17906A4A00394BC2 /* DLDownload.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9352246A178B0008001DE7C4 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9352246C178B001F001DE7C4 /* UniversalDetector.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		931C8A8317954CD100B6F62F /* DLLyricsFloatWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLyricsFloatWindow.h; sourceTree = "<group>"; };
+		931C8A8417954CD100B6F62F /* DLLyricsFloatWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLyricsFloatWindow.m; sourceTree = "<group>"; };
+		931C8A8517954CD100B6F62F /* DLLyricsFloatWndController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLyricsFloatWndController.h; sourceTree = "<group>"; };
+		931C8A8617954CD100B6F62F /* DLLyricsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLyricsView.h; sourceTree = "<group>"; };
+		931C8A8717954CD100B6F62F /* DLLyricsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLyricsView.m; sourceTree = "<group>"; };
+		93243E1C178465D000B975E4 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		93243E2417846C9600B975E4 /* DLPreferenceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLPreferenceWindowController.h; path = Preferences/DLPreferenceWindowController.h; sourceTree = "<group>"; };
+		93243E2517846C9700B975E4 /* DLPreferenceWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLPreferenceWindowController.m; path = Preferences/DLPreferenceWindowController.m; sourceTree = "<group>"; };
+		9326EF3A1785B62200F9069A /* DLiTunesControlNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLiTunesControlNotifier.h; sourceTree = "<group>"; };
+		9326EF3B1785B62200F9069A /* DLiTunesControlNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLiTunesControlNotifier.m; sourceTree = "<group>"; };
+		9326EF3C1785B62200F9069A /* DLiTunesControlObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLiTunesControlObserver.h; sourceTree = "<group>"; };
+		9326EF3D1785B62200F9069A /* DLiTunesControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLiTunesControl.h; sourceTree = "<group>"; };
+		9326EF3E1785B62200F9069A /* DLiTunesControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLiTunesControl.m; sourceTree = "<group>"; };
+		9326EF3F1785B62200F9069A /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		9326EF471785BBB800F9069A /* StatusBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusBar.xib; sourceTree = "<group>"; };
+		9326EF491785BCE800F9069A /* DLLyricsStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLyricsStatusBar.h; sourceTree = "<group>"; };
+		9326EF4A1785BCE800F9069A /* DLLyricsStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLyricsStatusBar.m; sourceTree = "<group>"; };
+		9352245B178AFFA0001DE7C4 /* LrcToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LrcToken.h; sourceTree = "<group>"; };
+		9352245C178AFFA0001DE7C4 /* LrcToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LrcToken.m; sourceTree = "<group>"; };
+		9352245D178AFFA0001DE7C4 /* LrcTokensPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LrcTokensPool.h; sourceTree = "<group>"; };
+		9352245E178AFFA0001DE7C4 /* LrcTokensPool.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LrcTokensPool.mm; sourceTree = "<group>"; };
+		93522463178AFFA0001DE7C4 /* DLLyricsFloatWndController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLyricsFloatWndController.m; sourceTree = "<group>"; };
+		9352246B178B001F001DE7C4 /* UniversalDetector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniversalDetector.framework; path = "Desktop Lyrics/Frameworks/UniversalDetector.framework"; sourceTree = "<group>"; };
+		9363D56317944EC600C37DAB /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
+		9363D5661794569500C37DAB /* DLAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAboutWindowController.h; sourceTree = "<group>"; };
+		9363D5671794569500C37DAB /* DLAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAboutWindowController.m; sourceTree = "<group>"; };
+		9395799D179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBaiduAPIXMLParseOperation.h; sourceTree = "<group>"; };
+		9395799E179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBaiduAPIXMLParseOperation.m; sourceTree = "<group>"; };
+		93D2ECD7178F04B600B5C039 /* VOutTextRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOutTextRender.h; sourceTree = "<group>"; };
+		93D2ECD8178F04B600B5C039 /* VOutTextRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOutTextRender.m; sourceTree = "<group>"; };
+		93EC4B66178D9A5800DD5A7B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		93EC4B6A178D9F8A00DD5A7B /* NSColor+CGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+CGColor.h"; sourceTree = "<group>"; };
+		93EC4B6B178D9F8A00DD5A7B /* NSColor+CGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+CGColor.m"; sourceTree = "<group>"; };
+		93EC4B6D178DA47000DD5A7B /* FloatLyricWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloatLyricWindow.xib; sourceTree = "<group>"; };
+		93EC4B74178DAACD00DD5A7B /* DLLyricsStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLyricsStorage.h; sourceTree = "<group>"; };
+		93EC4B75178DAACD00DD5A7B /* DLLyricsStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLyricsStorage.m; sourceTree = "<group>"; };
+		93EC4B78178DBC7700DD5A7B /* DLDataDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLDataDefine.h; sourceTree = "<group>"; };
+		93EC4B79178DBC7800DD5A7B /* DLDataDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLDataDefine.m; sourceTree = "<group>"; };
+		93F9F913178324CF00F553B0 /* Desktop Lyrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Lyrics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F9F916178324CF00F553B0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		93F9F919178324CF00F553B0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		93F9F91A178324CF00F553B0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		93F9F91B178324CF00F553B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		93F9F91E178324CF00F553B0 /* Desktop Lyrics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Desktop Lyrics-Info.plist"; sourceTree = "<group>"; };
+		93F9F920178324CF00F553B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		93F9F922178324CF00F553B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93F9F924178324CF00F553B0 /* Desktop Lyrics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Desktop Lyrics-Prefix.pch"; sourceTree = "<group>"; };
+		93F9F926178324CF00F553B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		93F9F928178324CF00F553B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		93F9F929178324CF00F553B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		93F9F92C178324D000F553B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		93FB21E617905AC500394BC2 /* DLLRCFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLRCFetcher.h; sourceTree = "<group>"; };
+		93FB21E717905AC500394BC2 /* DLLRCFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLRCFetcher.m; sourceTree = "<group>"; };
+		93FB21EA17906A4A00394BC2 /* DLDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLDownload.h; sourceTree = "<group>"; };
+		93FB21EB17906A4A00394BC2 /* DLDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLDownload.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93F9F910178324CF00F553B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EC4B67178D9A5800DD5A7B /* QuartzCore.framework in Frameworks */,
+				93243E1D178465D000B975E4 /* ScriptingBridge.framework in Frameworks */,
+				93F9F917178324CF00F553B0 /* Cocoa.framework in Frameworks */,
+				9352246D178B002A001DE7C4 /* UniversalDetector.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9326EF391785B61000F9069A /* iTunesControl */ = {
+			isa = PBXGroup;
+			children = (
+				9326EF3F1785B62200F9069A /* iTunes.h */,
+				9326EF3D1785B62200F9069A /* DLiTunesControl.h */,
+				9326EF3E1785B62200F9069A /* DLiTunesControl.m */,
+				9326EF3A1785B62200F9069A /* DLiTunesControlNotifier.h */,
+				9326EF3B1785B62200F9069A /* DLiTunesControlNotifier.m */,
+				9326EF3C1785B62200F9069A /* DLiTunesControlObserver.h */,
+			);
+			path = iTunesControl;
+			sourceTree = "<group>";
+		};
+		9326EF451785BB7000F9069A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9326EF461785BB7000F9069A /* XIB */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9326EF461785BB7000F9069A /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				93F9F92B178324D000F553B0 /* MainMenu.xib */,
+				9326EF471785BBB800F9069A /* StatusBar.xib */,
+				93EC4B6D178DA47000DD5A7B /* FloatLyricWindow.xib */,
+				9363D56317944EC600C37DAB /* About.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		9352245A178AFFA0001DE7C4 /* Lyrics */ = {
+			isa = PBXGroup;
+			children = (
+				93D2ECD7178F04B600B5C039 /* VOutTextRender.h */,
+				93D2ECD8178F04B600B5C039 /* VOutTextRender.m */,
+				93EC4B73178DAA7000DD5A7B /* LyricsStorage */,
+				93EC4B6F178DAA3700DD5A7B /* LyricsParse */,
+				93FB21E9179069F400394BC2 /* Download */,
+				9352245F178AFFA0001DE7C4 /* LyricShow */,
+				9395799D179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.h */,
+				9395799E179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m */,
+				93FB21E617905AC500394BC2 /* DLLRCFetcher.h */,
+				93FB21E717905AC500394BC2 /* DLLRCFetcher.m */,
+			);
+			path = Lyrics;
+			sourceTree = "<group>";
+		};
+		9352245F178AFFA0001DE7C4 /* LyricShow */ = {
+			isa = PBXGroup;
+			children = (
+				931C8A8317954CD100B6F62F /* DLLyricsFloatWindow.h */,
+				931C8A8417954CD100B6F62F /* DLLyricsFloatWindow.m */,
+				931C8A8517954CD100B6F62F /* DLLyricsFloatWndController.h */,
+				93522463178AFFA0001DE7C4 /* DLLyricsFloatWndController.m */,
+				931C8A8617954CD100B6F62F /* DLLyricsView.h */,
+				931C8A8717954CD100B6F62F /* DLLyricsView.m */,
+			);
+			path = LyricShow;
+			sourceTree = "<group>";
+		};
+		9363D5651794567300C37DAB /* About */ = {
+			isa = PBXGroup;
+			children = (
+				9363D5661794569500C37DAB /* DLAboutWindowController.h */,
+				9363D5671794569500C37DAB /* DLAboutWindowController.m */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		93EC4B69178D9F8A00DD5A7B /* CocoaAddtions */ = {
+			isa = PBXGroup;
+			children = (
+				93EC4B6A178D9F8A00DD5A7B /* NSColor+CGColor.h */,
+				93EC4B6B178D9F8A00DD5A7B /* NSColor+CGColor.m */,
+			);
+			path = CocoaAddtions;
+			sourceTree = "<group>";
+		};
+		93EC4B6F178DAA3700DD5A7B /* LyricsParse */ = {
+			isa = PBXGroup;
+			children = (
+				9352245B178AFFA0001DE7C4 /* LrcToken.h */,
+				9352245C178AFFA0001DE7C4 /* LrcToken.m */,
+				9352245D178AFFA0001DE7C4 /* LrcTokensPool.h */,
+				9352245E178AFFA0001DE7C4 /* LrcTokensPool.mm */,
+			);
+			name = LyricsParse;
+			sourceTree = "<group>";
+		};
+		93EC4B73178DAA7000DD5A7B /* LyricsStorage */ = {
+			isa = PBXGroup;
+			children = (
+				93EC4B74178DAACD00DD5A7B /* DLLyricsStorage.h */,
+				93EC4B75178DAACD00DD5A7B /* DLLyricsStorage.m */,
+			);
+			name = LyricsStorage;
+			sourceTree = "<group>";
+		};
+		93F9F90A178324CF00F553B0 = {
+			isa = PBXGroup;
+			children = (
+				93F9F91C178324CF00F553B0 /* Desktop Lyrics */,
+				93F9F915178324CF00F553B0 /* Frameworks */,
+				93F9F914178324CF00F553B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93F9F914178324CF00F553B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93F9F913178324CF00F553B0 /* Desktop Lyrics.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93F9F915178324CF00F553B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93F9F916178324CF00F553B0 /* Cocoa.framework */,
+				93F9F918178324CF00F553B0 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93F9F918178324CF00F553B0 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93EC4B66178D9A5800DD5A7B /* QuartzCore.framework */,
+				9352246B178B001F001DE7C4 /* UniversalDetector.framework */,
+				93243E1C178465D000B975E4 /* ScriptingBridge.framework */,
+				93F9F919178324CF00F553B0 /* AppKit.framework */,
+				93F9F91A178324CF00F553B0 /* CoreData.framework */,
+				93F9F91B178324CF00F553B0 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		93F9F91C178324CF00F553B0 /* Desktop Lyrics */ = {
+			isa = PBXGroup;
+			children = (
+				93F9F9331783250D00F553B0 /* Classes */,
+				93F9F928178324CF00F553B0 /* AppDelegate.h */,
+				93F9F929178324CF00F553B0 /* AppDelegate.m */,
+				9326EF451785BB7000F9069A /* Resources */,
+				93F9F91D178324CF00F553B0 /* Supporting Files */,
+			);
+			path = "Desktop Lyrics";
+			sourceTree = "<group>";
+		};
+		93F9F91D178324CF00F553B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93F9F91E178324CF00F553B0 /* Desktop Lyrics-Info.plist */,
+				93F9F91F178324CF00F553B0 /* InfoPlist.strings */,
+				93F9F922178324CF00F553B0 /* main.m */,
+				93F9F924178324CF00F553B0 /* Desktop Lyrics-Prefix.pch */,
+				93F9F925178324CF00F553B0 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93F9F9331783250D00F553B0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				93EC4B78178DBC7700DD5A7B /* DLDataDefine.h */,
+				93EC4B79178DBC7800DD5A7B /* DLDataDefine.m */,
+				93EC4B69178D9F8A00DD5A7B /* CocoaAddtions */,
+				9352245A178AFFA0001DE7C4 /* Lyrics */,
+				9326EF391785B61000F9069A /* iTunesControl */,
+				93F9F9361783263100F553B0 /* StatusBar */,
+				9363D5651794567300C37DAB /* About */,
+				93F9F9351783262700F553B0 /* Preferences */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		93F9F9351783262700F553B0 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				93243E2417846C9600B975E4 /* DLPreferenceWindowController.h */,
+				93243E2517846C9700B975E4 /* DLPreferenceWindowController.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		93F9F9361783263100F553B0 /* StatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				9326EF491785BCE800F9069A /* DLLyricsStatusBar.h */,
+				9326EF4A1785BCE800F9069A /* DLLyricsStatusBar.m */,
+			);
+			name = StatusBar;
+			sourceTree = "<group>";
+		};
+		93FB21E9179069F400394BC2 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				93FB21EA17906A4A00394BC2 /* DLDownload.h */,
+				93FB21EB17906A4A00394BC2 /* DLDownload.m */,
+			);
+			name = Download;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93F9F912178324CF00F553B0 /* Desktop Lyrics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93F9F930178324D000F553B0 /* Build configuration list for PBXNativeTarget "Desktop Lyrics" */;
+			buildPhases = (
+				93F9F90F178324CF00F553B0 /* Sources */,
+				93F9F910178324CF00F553B0 /* Frameworks */,
+				93F9F911178324CF00F553B0 /* Resources */,
+				9352246A178B0008001DE7C4 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Desktop Lyrics";
+			productName = "Desktop Lyrics";
+			productReference = 93F9F913178324CF00F553B0 /* Desktop Lyrics.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93F9F90B178324CF00F553B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = subo;
+			};
+			buildConfigurationList = 93F9F90E178324CF00F553B0 /* Build configuration list for PBXProject "Desktop Lyrics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 93F9F90A178324CF00F553B0;
+			productRefGroup = 93F9F914178324CF00F553B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93F9F912178324CF00F553B0 /* Desktop Lyrics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93F9F911178324CF00F553B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93F9F921178324CF00F553B0 /* InfoPlist.strings in Resources */,
+				93F9F927178324CF00F553B0 /* Credits.rtf in Resources */,
+				93F9F92D178324D000F553B0 /* MainMenu.xib in Resources */,
+				9326EF481785BBB800F9069A /* StatusBar.xib in Resources */,
+				93EC4B6E178DA47000DD5A7B /* FloatLyricWindow.xib in Resources */,
+				9363D56417944EC600C37DAB /* About.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93F9F90F178324CF00F553B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93F9F923178324CF00F553B0 /* main.m in Sources */,
+				93F9F92A178324CF00F553B0 /* AppDelegate.m in Sources */,
+				93243E2617846C9700B975E4 /* DLPreferenceWindowController.m in Sources */,
+				9326EF401785B62200F9069A /* DLiTunesControlNotifier.m in Sources */,
+				9326EF411785B62200F9069A /* DLiTunesControl.m in Sources */,
+				9326EF4B1785BCE800F9069A /* DLLyricsStatusBar.m in Sources */,
+				93522464178AFFA0001DE7C4 /* LrcToken.m in Sources */,
+				93522465178AFFA0001DE7C4 /* LrcTokensPool.mm in Sources */,
+				93522467178AFFA0001DE7C4 /* DLLyricsFloatWndController.m in Sources */,
+				93EC4B6C178D9F8A00DD5A7B /* NSColor+CGColor.m in Sources */,
+				93EC4B76178DAACD00DD5A7B /* DLLyricsStorage.m in Sources */,
+				93EC4B7A178DBC7800DD5A7B /* DLDataDefine.m in Sources */,
+				93D2ECD9178F04B600B5C039 /* VOutTextRender.m in Sources */,
+				9395799F179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m in Sources */,
+				93FB21E817905AC500394BC2 /* DLLRCFetcher.m in Sources */,
+				93FB21EC17906A4A00394BC2 /* DLDownload.m in Sources */,
+				9363D5681794569500C37DAB /* DLAboutWindowController.m in Sources */,
+				931C8A8817954CD100B6F62F /* DLLyricsFloatWindow.m in Sources */,
+				931C8A8917954CD100B6F62F /* DLLyricsView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		93F9F91F178324CF00F553B0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93F9F920178324CF00F553B0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		93F9F925178324CF00F553B0 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93F9F926178324CF00F553B0 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		93F9F92B178324D000F553B0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93F9F92C178324D000F553B0 /* en */,
+			);
+			name = MainMenu.xib;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93F9F92E178324D000F553B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.7;
+			};
+			name = Debug;
+		};
+		93F9F92F178324D000F553B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx10.7;
+			};
+			name = Release;
+		};
+		93F9F931178324D000F553B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Desktop Lyrics/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Desktop Lyrics/Desktop Lyrics-Prefix.pch";
+				INFOPLIST_FILE = "Desktop Lyrics/Desktop Lyrics-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		93F9F932178324D000F553B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Desktop Lyrics/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Desktop Lyrics/Desktop Lyrics-Prefix.pch";
+				INFOPLIST_FILE = "Desktop Lyrics/Desktop Lyrics-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93F9F90E178324CF00F553B0 /* Build configuration list for PBXProject "Desktop Lyrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93F9F92E178324D000F553B0 /* Debug */,
+				93F9F92F178324D000F553B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93F9F930178324D000F553B0 /* Build configuration list for PBXNativeTarget "Desktop Lyrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93F9F931178324D000F553B0 /* Debug */,
+				93F9F932178324D000F553B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93F9F90B178324CF00F553B0 /* Project object */;
+}
