@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'Desktop Lyrics' target in the 'Desktop Lyrics' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#define SafeReleaseObj(o)   {[o release]; o = nil;} 
