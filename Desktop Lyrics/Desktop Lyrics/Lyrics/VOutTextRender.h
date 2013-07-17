@@ -14,6 +14,7 @@
     NSLayoutManager * _layoutManager;
     
     NSMutableDictionary * _textAttributeds;
+    NSString *_content;
 }
 
 - (NSBitmapImageRep *)render:(NSString *)context;

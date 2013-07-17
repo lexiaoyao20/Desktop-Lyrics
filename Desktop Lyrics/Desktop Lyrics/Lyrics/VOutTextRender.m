@@ -58,6 +58,13 @@
     [_textAttributeds setValue:[NSNumber numberWithFloat:-1] forKey:NSStrokeWidthAttributeName];//轮廓宽度
     [_textAttributeds setValue:[NSColor blackColor] forKey:NSStrokeColorAttributeName];//轮廓颜色
     
+    NSShadow *shadow = [[NSShadow alloc] init];
+    [shadow setShadowColor:[NSColor blackColor]];
+    [shadow setShadowOffset:NSMakeSize(1, 1)];
+    [shadow setShadowBlurRadius:1];
+    [_textAttributeds setValue:shadow forKey:NSShadowAttributeName];
+    SafeReleaseObj(shadow);
+    
     NSMutableParagraphStyle* paraStyle = [[NSMutableParagraphStyle alloc] init];
 	[paraStyle setAlignment:NSCenterTextAlignment];
 	[paraStyle setLineBreakMode:NSLineBreakByWordWrapping];
