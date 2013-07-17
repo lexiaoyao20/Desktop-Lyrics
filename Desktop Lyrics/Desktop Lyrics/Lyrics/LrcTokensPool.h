@@ -22,6 +22,7 @@
 @property (nonatomic, readonly) NSString *album;
 @property (nonatomic, readonly) NSString *lrcauther;
 @property (nonatomic, readonly) NSArray *lyrics;
+@property (nonatomic, readonly) int offset;
 
 - (id)initWithFilePath:(NSString *)path;
 - (BOOL)parseLyrics;

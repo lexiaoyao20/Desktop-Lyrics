@@ -153,6 +153,15 @@
     [self setTargetImage:image];
     SafeReleaseObj(image);
     
+    float windowHeight = [_sourceImage extent].size.height;
+    if (windowHeight > 0) {
+        NSRect windowRect = self.window.frame;
+        NSPoint origin = self.window.frame.origin;
+        windowRect.size.height = windowHeight;
+        windowRect.origin = origin;
+        [self.window setFrame:windowRect display:YES];
+    }
+    
     [_transition setValue: _sourceImage  forKey: @"inputImage"];
     [_transition setValue: _targetImage  forKey: @"inputTargetImage"];
     [self refreshInputExtent];
@@ -161,7 +170,7 @@
         [_timer invalidate];
         SafeReleaseObj(_timer);
     }
-//    _startShowLyricsInterval = CFAbsoluteTimeGetCurrent();
+
     //如果timeLength=5，也就是说在5s内要显示完一句歌词，而刷新绘制的计时器的时间间隔是1/30s（即33毫秒）,就是1秒要刷新绘制33次，
     //那么5秒就要刷新 5 * 33 次
     _showTotalCount = (1.0 / (ShowLRCTimeInterval * 1000)) * timeLength;

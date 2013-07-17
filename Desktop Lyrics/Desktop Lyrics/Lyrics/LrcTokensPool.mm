@@ -208,16 +208,20 @@
         }
 		
     } while (![lrcScanner isAtEnd]);
-//	[attributes_ enumerateKeysAndObjectsUsingBlock: ^(id key, id obj, BOOL *stop) {
-//		NSLog(@"Enumerating Key %@ and Value %@", key, obj);
-//	}];
-	// sort by timestamp.
 
+	// sort by timestamp.
 	NSSortDescriptor *sortDescriptor;
 	sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"timeStamp"
 												  ascending:YES] autorelease];
 	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
 	[lyricPool_ sortUsingDescriptors:sortDescriptors];
+    
+    if (self.offset != 0) {
+        for (LyricItem *item in lyricPool_) {
+            item.timeStamp += self.offset;
+        }
+    }
+    
 
 	return YES;
 }
@@ -318,6 +322,15 @@
 - (NSString*)lrcauther
 {
 	return [attributes_ objectForKey:@"by"];
+}
+
+- (int)offset {
+    NSNumber *number = [attributes_ objectForKey:@"offset"];
+    if (number) {
+        return [number intValue];
+    }
+    
+    return 0;
 }
 
 - (NSArray *)lyrics 
