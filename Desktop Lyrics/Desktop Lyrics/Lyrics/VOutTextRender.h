@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString const * GradientColorKey;
+
 @interface VOutTextRender : NSObject {
     NSTextContainer * _textContainer;
     NSTextStorage   * _textStorage;
@@ -15,7 +17,11 @@
     
     NSMutableDictionary * _textAttributeds;
     NSString *_content;
+    
+    NSArray *_gradientColorArray;
 }
+
+@property (nonatomic,retain) NSArray *gradientColorArray;
 
 - (NSBitmapImageRep *)render:(NSString *)context;
 
@@ -28,6 +34,7 @@
  * @result 
  */
 - (void)setValue:(id)value forKey:(NSString *)key;
+
 
 @end
 

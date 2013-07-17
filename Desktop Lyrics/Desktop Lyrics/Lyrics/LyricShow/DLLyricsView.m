@@ -142,12 +142,22 @@
     _lyricString = lyric;
     
     [_textRender setValue:self.lyricForegroundColor forKey:NSForegroundColorAttributeName];
+    NSArray *colorArray = [NSArray arrayWithObjects:[NSColor colorWithDeviceRed:127/255.0 green:255/255.0 blue:0 alpha:1.0],
+                                                    [NSColor colorWithDeviceRed:50/255.0 green:205/255.0 blue:50/255.0 alpha:1.0],
+                           [NSColor colorWithDeviceRed:0 green:1 blue:0 alpha:1],
+                                                      [NSColor colorWithDeviceRed:34/255.0 green:139/255.0 blue:34/255.0 alpha:1.0],nil];
+                           
+    [_textRender setGradientColorArray:colorArray];
     NSData *imageDate = [[_textRender render:_lyricString] TIFFRepresentation];
     CIImage *image = [[CIImage alloc] initWithData:imageDate];
     [self setSourceImage:image];
     SafeReleaseObj(image);
     
     [_textRender setValue:self.lyricKoroOKColor forKey:NSForegroundColorAttributeName];
+    colorArray = [NSArray arrayWithObjects:[NSColor colorWithDeviceRed:255/255.0 green:97/255.0 blue:0 alpha:1.0],
+                  [NSColor colorWithDeviceRed:255/255.0 green:128/255.0 blue:0/255.0 alpha:1.0],
+                  [NSColor colorWithDeviceRed:255/255.0 green:180/255.0 blue:0/255.0 alpha:1.0],nil];
+    [_textRender setGradientColorArray:colorArray];
     imageDate = [[_textRender render:_lyricString] TIFFRepresentation];
     image = [[CIImage alloc] initWithData:imageDate];
     [self setTargetImage:image];
