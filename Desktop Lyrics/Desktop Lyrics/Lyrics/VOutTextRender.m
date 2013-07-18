@@ -7,6 +7,8 @@
 //
 
 #import "VOutTextRender.h"
+#import "NSImage+Gradient.h"
+
 NSString const * GradientColorKey = @"GradientColor";
 
 @implementation VOutTextRender
@@ -134,7 +136,7 @@ NSString const * GradientColorKey = @"GradientColor";
         if (ctx) {
             
             if (_gradientColorArray) {
-                NSImage *colorImage = [self gradientImageWithColors:_gradientColorArray :repSize];
+                NSImage *colorImage = [NSImage gradientImageWithColors:_gradientColorArray imageSize:repSize];
                 NSColor *foregroundColor = [NSColor colorWithPatternImage:colorImage];
                 if (foregroundColor) {
                     [_textAttributeds setValue:foregroundColor forKey:NSForegroundColorAttributeName];
@@ -169,79 +171,6 @@ NSString const * GradientColorKey = @"GradientColor";
     }
     
     return [bitmapRep autorelease];
-}
-
-//生成渐近色图片
-- (NSImage *)gradientImageWithColors:(NSArray *)gradientColors :(NSSize)repSize {
-    
-    NSBitmapImageRep * bitmapRep = nil;
-    
-    if (repSize.width > 0 && repSize.height > 0) {
-        
-        int pixelsWide = repSize.width, pixelsHigh = repSize.height; 
-        CGContextRef ctx = NULL;
-        
-        bitmapRep = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes: nil  // Nil pointer makes the kit allocate the pixel buffer for us.
-                                                            pixelsWide: pixelsWide  // The compiler will convert these to integers, but I just wanted to  make it quite explicit
-                                                            pixelsHigh: pixelsHigh //
-                                                         bitsPerSample: 8
-                                                       samplesPerPixel: 4  // Four samples, that is: RGBA
-                                                              hasAlpha: YES
-                                                              isPlanar: NO  // The math can be simpler with planar images, but performance suffers..
-                                                        colorSpaceName: NSCalibratedRGBColorSpace  // A calibrated color space gets us ColorSync for free.
-                                                           bytesPerRow: pixelsWide * 4      // Passing zero means "you figure it out."
-                                                          bitsPerPixel: 32];  // This must agree with bitsPerSample and samplesPerPixel.;
-        
-        if (bitmapRep) {
-            ctx = CGBitmapContextCreate([bitmapRep bitmapData], [bitmapRep size].width, [bitmapRep size].height, [bitmapRep bitsPerSample], [bitmapRep bytesPerRow], [[bitmapRep colorSpace] CGColorSpace], kCGImageAlphaPremultipliedLast);
-        }
-        
-        if (ctx) {
-            CGContextSaveGState(ctx);
-            //draw gradient    
-            CGGradientRef gradient;
-            CGColorSpaceRef rgbColorspace;
-            
-            //set uniform distribution of color locations
-            size_t num_locations = [gradientColors count];
-            CGFloat locations[num_locations];
-            for (int k=0; k<num_locations; k++) {
-                locations[k] = k / (CGFloat)(num_locations - 1); //we need the locations to start at 0.0 and end at 1.0, equaly filling the domain
-            }
-            
-            //create c array from color array
-            CGFloat components[num_locations * 4];
-            for (int i=0; i<num_locations; i++) {
-                NSColor *color = [gradientColors objectAtIndex:i];
-//                NSAssert(color.canProvideRGBComponents, @"Color components could not be extracted from StyleLabel gradient colors.");
-                components[4*i+0] = [color redComponent];
-                components[4*i+1] = [color greenComponent];
-                components[4*i+2] = [color blueComponent];
-                components[4*i+3] = [color alphaComponent];
-            }
-            
-            rgbColorspace = CGColorSpaceCreateDeviceRGB();
-            gradient = CGGradientCreateWithColorComponents(rgbColorspace, components, locations, num_locations);
-            CGPoint topCenter = CGPointMake(0, 0);
-            CGPoint bottomCenter = CGPointMake(0, repSize.height);
-            CGContextDrawLinearGradient(ctx, gradient, topCenter, bottomCenter, 0);
-            
-            CGGradientRelease(gradient);
-            CGColorSpaceRelease(rgbColorspace); 
-            
-            // pop context 
-            CGContextRestoreGState(ctx);							
-        }
-        
-        if (ctx) {
-            CGContextRelease(ctx); ctx = nil;
-        }
-    }
-    
-    NSImage *image = [[NSImage alloc] initWithData:[bitmapRep TIFFRepresentation]];
-    SafeReleaseObj(bitmapRep);
-    
-    return [image autorelease];
 }
 
 - (NSBitmapImageRep *)render:(NSString *)context {

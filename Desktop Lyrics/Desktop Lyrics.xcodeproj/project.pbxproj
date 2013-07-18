@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930F59A6179787DA00F358E1 /* SearchWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930F59A5179787DA00F358E1 /* SearchWindow.xib */; };
+		930F59AA1797890B00F358E1 /* NSImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 930F59A91797890B00F358E1 /* NSImage+Gradient.m */; };
 		931C8A8817954CD100B6F62F /* DLLyricsFloatWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 931C8A8417954CD100B6F62F /* DLLyricsFloatWindow.m */; };
 		931C8A8917954CD100B6F62F /* DLLyricsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 931C8A8717954CD100B6F62F /* DLLyricsView.m */; };
 		93243E1D178465D000B975E4 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93243E1C178465D000B975E4 /* ScriptingBridge.framework */; };
@@ -22,6 +24,7 @@
 		9352246D178B002A001DE7C4 /* UniversalDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9352246B178B001F001DE7C4 /* UniversalDetector.framework */; };
 		9363D56417944EC600C37DAB /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9363D56317944EC600C37DAB /* About.xib */; };
 		9363D5681794569500C37DAB /* DLAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9363D5671794569500C37DAB /* DLAboutWindowController.m */; };
+		93833D0D1796B9A5000AAE4E /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 93833D0C1796B9A5000AAE4E /* icon.icns */; };
 		9395799F179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9395799E179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m */; };
 		93D2ECD9178F04B600B5C039 /* VOutTextRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2ECD8178F04B600B5C039 /* VOutTextRender.m */; };
 		93EC4B67178D9A5800DD5A7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC4B66178D9A5800DD5A7B /* QuartzCore.framework */; };
@@ -54,6 +57,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		930F59A5179787DA00F358E1 /* SearchWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchWindow.xib; sourceTree = "<group>"; };
+		930F59A81797890B00F358E1 /* NSImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Gradient.h"; sourceTree = "<group>"; };
+		930F59A91797890B00F358E1 /* NSImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Gradient.m"; sourceTree = "<group>"; };
 		931C8A8317954CD100B6F62F /* DLLyricsFloatWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLyricsFloatWindow.h; sourceTree = "<group>"; };
 		931C8A8417954CD100B6F62F /* DLLyricsFloatWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLyricsFloatWindow.m; sourceTree = "<group>"; };
 		931C8A8517954CD100B6F62F /* DLLyricsFloatWndController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLyricsFloatWndController.h; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 		9363D56317944EC600C37DAB /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
 		9363D5661794569500C37DAB /* DLAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAboutWindowController.h; sourceTree = "<group>"; };
 		9363D5671794569500C37DAB /* DLAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAboutWindowController.m; sourceTree = "<group>"; };
+		93833D0C1796B9A5000AAE4E /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		9395799D179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBaiduAPIXMLParseOperation.h; sourceTree = "<group>"; };
 		9395799E179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBaiduAPIXMLParseOperation.m; sourceTree = "<group>"; };
 		93D2ECD7178F04B600B5C039 /* VOutTextRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOutTextRender.h; sourceTree = "<group>"; };
@@ -126,6 +133,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		930F59AC17978DFB00F358E1 /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
 		9326EF391785B61000F9069A /* iTunesControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +156,7 @@
 		9326EF451785BB7000F9069A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				93833D0C1796B9A5000AAE4E /* icon.icns */,
 				9326EF461785BB7000F9069A /* XIB */,
 			);
 			path = Resources;
@@ -154,6 +169,7 @@
 				9326EF471785BBB800F9069A /* StatusBar.xib */,
 				93EC4B6D178DA47000DD5A7B /* FloatLyricWindow.xib */,
 				9363D56317944EC600C37DAB /* About.xib */,
+				930F59A5179787DA00F358E1 /* SearchWindow.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -202,6 +218,8 @@
 			children = (
 				93EC4B6A178D9F8A00DD5A7B /* NSColor+CGColor.h */,
 				93EC4B6B178D9F8A00DD5A7B /* NSColor+CGColor.m */,
+				930F59A81797890B00F358E1 /* NSImage+Gradient.h */,
+				930F59A91797890B00F358E1 /* NSImage+Gradient.m */,
 			);
 			path = CocoaAddtions;
 			sourceTree = "<group>";
@@ -300,6 +318,7 @@
 				93F9F9361783263100F553B0 /* StatusBar */,
 				9363D5651794567300C37DAB /* About */,
 				93F9F9351783262700F553B0 /* Preferences */,
+				930F59AC17978DFB00F358E1 /* CommonUI */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -389,6 +408,8 @@
 				9326EF481785BBB800F9069A /* StatusBar.xib in Resources */,
 				93EC4B6E178DA47000DD5A7B /* FloatLyricWindow.xib in Resources */,
 				9363D56417944EC600C37DAB /* About.xib in Resources */,
+				93833D0D1796B9A5000AAE4E /* icon.icns in Resources */,
+				930F59A6179787DA00F358E1 /* SearchWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +439,7 @@
 				9363D5681794569500C37DAB /* DLAboutWindowController.m in Sources */,
 				931C8A8817954CD100B6F62F /* DLLyricsFloatWindow.m in Sources */,
 				931C8A8917954CD100B6F62F /* DLLyricsView.m in Sources */,
+				930F59AA1797890B00F358E1 /* NSImage+Gradient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

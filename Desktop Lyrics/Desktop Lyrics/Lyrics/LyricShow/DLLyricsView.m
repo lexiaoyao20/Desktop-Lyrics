@@ -74,7 +74,7 @@
     //歌词居中显示
     CIImage *image = [self imageForTransition: t];
 //    NSLog(@"image size:(%f,%f)",[image extent].size.width,[image extent].size.height);
-    NSPoint drawPoint;
+    CGPoint drawPoint;
     drawPoint.x = (self.frame.size.width - [image extent].size.width) / 2;
     drawPoint.y = cg.origin.y;
     [_context drawImage: image
