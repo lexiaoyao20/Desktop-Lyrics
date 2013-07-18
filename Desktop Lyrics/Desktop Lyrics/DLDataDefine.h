@@ -45,6 +45,7 @@ extern NSString * const DLXMLParseErrorDomain;
 //错误编码
 enum  {
     DataIsNil = 0,
-    CannotFindLRC
+    CannotFindLRC,
+    SearchFailed
 };
 typedef NSInteger DLXMLParseErrorCode;

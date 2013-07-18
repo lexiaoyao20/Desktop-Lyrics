@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DLBaiduAPIXMLParseOperation.h"
 #import "DLDownload.h"
 
 @protocol LRCFetcherDelegate;
 
-@interface DLLRCFetcher : NSObject<BaiDuAPIXMLParseDelegate,DLDownloadDelegate> {
+@interface DLLRCFetcher : NSObject<DLDownloadDelegate> {
     NSOperationQueue *_operationQueue;
     NSString *_artist;
     NSString *_title;

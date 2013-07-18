@@ -9,11 +9,14 @@
 #import "DLBaiduAPIXMLParseOperation.h"
 #import "DLDataDefine.h"
 
-NSString const * DLBaiDuAPIXMLParseDidFinishNotification = @"BaiDuAPIXMLParseDidFinish";
+NSString * DLBaiDuAPIXMLParseDidFinishNotification = @"BaiDuAPIXMLParseDidFinish";
+NSString const * DLLRCURLListKey = @"LRCURLListKey";
+NSString const * DLSongsURLListKey = @"SongsURLListKey";
+NSString const * DLErrorKey = @"ErrorKey";
 
 @implementation DLBaiduAPIXMLParseOperation
 
-@synthesize delegate = _delegate;
+
 @synthesize requestURL = _requestURL;
 @synthesize lrcsURLList = _lrcsURLList;
 @synthesize songsURLList = _songsURLList;
@@ -22,7 +25,7 @@ NSString const * DLBaiDuAPIXMLParseDidFinishNotification = @"BaiDuAPIXMLParseDid
     self = [super init];
     if (self && url) {
         self.requestURL = url;
-        _lrcCount = 0;
+        _searchCount = 0;
         _lrcsURLList = [[NSMutableArray alloc] init];
     }
     else {
@@ -44,14 +47,22 @@ NSString const * DLBaiDuAPIXMLParseDidFinishNotification = @"BaiDuAPIXMLParseDid
 - (void)main {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     NSError *error = nil;
+    NSDictionary *userInfo = nil;
     NSXMLDocument *xmlDoc = [[NSXMLDocument alloc] initWithContentsOfURL:_requestURL options:NSDataReadingMappedIfSafe error:&error];
+    
     if (error) {
-        [self endParseWithError:error];
+        userInfo = [NSDictionary dictionaryWithObject:error forKey:DLErrorKey];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DLBaiDuAPIXMLParseDidFinishNotification
+                                                            object:self
+                                                          userInfo:userInfo];
     }
     
     if (!xmlDoc || ![xmlDoc rootElement]) {
         error = [NSError errorWithDomain:DLXMLParseErrorDomain code:DataIsNil userInfo:nil] ;
-        [self endParseWithError:error];
+        userInfo = [NSDictionary dictionaryWithObject:error forKey:DLErrorKey];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DLBaiDuAPIXMLParseDidFinishNotification
+                                                            object:self
+                                                          userInfo:userInfo];
     }
     
     if (error == nil) {
@@ -60,13 +71,29 @@ NSString const * DLBaiDuAPIXMLParseDidFinishNotification = @"BaiDuAPIXMLParseDid
                 break;
             }
             
-            if ([[element name] isEqualToString:@"url"]) {
-                NSXMLElement *lycidElement = [[element elementsForName:@"lrcid"] objectAtIndex:0];
+            if ([[element name] isEqualToString:@"count"]) {
+                _searchCount = [[element stringValue] intValue];
+                if (_searchCount <= 0) {
+                    error = [NSError errorWithDomain:DLXMLParseErrorDomain code:SearchFailed userInfo:nil] ;
+                    userInfo = [NSDictionary dictionaryWithObject:error forKey:DLErrorKey];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:DLBaiDuAPIXMLParseDidFinishNotification
+                                                                        object:self
+                                                                      userInfo:userInfo];
+                    break;
+                }
+            }
+            else if ([[element name] isEqualToString:@"url"]) {
+                NSArray *lrcIDArray = [element elementsForName:@"lrcid"];
+                if (!lrcIDArray || [lrcIDArray count] == 0) {
+                    continue;
+                }
+                
+                NSXMLElement *lycidElement = [lrcIDArray objectAtIndex:0];
                 if (!lycidElement) {
                     continue;
                 }
                 
-                long lycid = [[lycidElement stringValue] longLongValue];
+                long lycid = (long)[[lycidElement stringValue] longLongValue];
                 
                 if (lycid == 0) {
                     continue;
@@ -88,15 +115,15 @@ NSString const * DLBaiDuAPIXMLParseDidFinishNotification = @"BaiDuAPIXMLParseDid
                 //解析歌曲下载地址
                 [self parseSongWithXMLElement:element];
             }
-    }
+        }
         
-        if ([_lrcsURLList count] == 0) {
-            NSError *error = [NSError errorWithDomain:DLXMLParseErrorDomain code:CannotFindLRC userInfo:nil] ;
-            [self endParseWithError:error];
-        }
-        else {
-            [self endParseWithError:nil];
-        }
+        userInfo = [NSDictionary dictionaryWithObjectsAndKeys:_lrcsURLList,DLLRCURLListKey,
+                    _songsURLList,DLSongsURLListKey, nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DLBaiDuAPIXMLParseDidFinishNotification
+                                                            object:self
+                                                          userInfo:userInfo];
+        
+    
     }
     [xmlDoc release];
     [pool release];
@@ -106,7 +133,7 @@ NSString const * DLBaiDuAPIXMLParseDidFinishNotification = @"BaiDuAPIXMLParseDid
     NSArray *encodeArray = [element elementsForName:@"encode"];
     NSArray *decodeArray = [element elementsForName:@"decode"];
     
-    if (!encodeArray || decodeArray) {
+    if (!encodeArray || !decodeArray) {
         return;
     }
     
@@ -128,12 +155,6 @@ NSString const * DLBaiDuAPIXMLParseDidFinishNotification = @"BaiDuAPIXMLParseDid
         if (songURL) {
             [_songsURLList addObject:songURL];
         }
-    }
-}
-
-- (void)endParseWithError:(NSError *)error {
-    if (_delegate && [_delegate respondsToSelector:@selector(baiduXMLParseDidFinished:error:)]) {
-        [_delegate baiduXMLParseDidFinished:self error:error];
     }
 }
 

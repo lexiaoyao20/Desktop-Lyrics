@@ -10,18 +10,15 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol BaiDuAPIXMLParseDelegate ;
 
 @interface DLBaiduAPIXMLParseOperation : NSOperation {
-    id<BaiDuAPIXMLParseDelegate> _delegate;
     NSURL *_requestURL;
     
-    NSInteger  _lrcCount;
+    NSInteger  _searchCount;
     NSMutableArray *_lrcsURLList;
     NSMutableArray *_songsURLList;
 }
 
-@property (nonatomic,assign) id<BaiDuAPIXMLParseDelegate> delegate;
 @property (nonatomic,retain) NSURL *requestURL;
 @property (nonatomic,readonly) NSArray *lrcsURLList;
 @property (nonatomic,readonly) NSMutableArray *songsURLList;
@@ -30,10 +27,10 @@
 
 @end
 
-@protocol BaiDuAPIXMLParseDelegate <NSObject>
+extern NSString * DLBaiDuAPIXMLParseDidFinishNotification;
 
-- (void)baiduXMLParseDidFinished:(DLBaiduAPIXMLParseOperation *)sender error:(NSError *)error;
+//Keys
+extern NSString const * DLLRCURLListKey ;
+extern NSString const * DLSongsURLListKey;
+extern NSString const * DLErrorKey;
 
-@end
-
-extern NSString const * DLBaiDuAPIXMLParseDidFinishNotification;

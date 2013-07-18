@@ -14,7 +14,7 @@
 @class DLBackgroundView;
 
 
-@interface DLSearchWindowController : NSWindowController<NSTableViewDataSource,BaiDuAPIXMLParseDelegate> {
+@interface DLSearchWindowController : NSWindowController<NSTableViewDataSource> {
     IBOutlet DLBackgroundView   *_backgroundView;
     IBOutlet NSTextField        *_titleTxt;
     IBOutlet NSTextField        *_artistTxt;

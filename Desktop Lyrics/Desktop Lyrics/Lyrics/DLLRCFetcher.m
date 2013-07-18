@@ -37,6 +37,7 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_artist release];
     [_title release];
     [_operationQueue release];
@@ -54,7 +55,10 @@
     assert([[[url scheme] lowercaseString] isEqual:@"http"] || [[[url scheme] lowercaseString] isEqual:@"https"]);
     
     DLBaiduAPIXMLParseOperation *xmlParseOp = [[DLBaiduAPIXMLParseOperation alloc] initWithRequestURL:url];
-    [xmlParseOp setDelegate:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(baiduXMLParseDidFinished:)
+                                                 name:DLBaiDuAPIXMLParseDidFinishNotification
+                                               object:xmlParseOp];
     [_operationQueue addOperation:xmlParseOp];
     SafeReleaseObj(xmlParseOp);
 }
@@ -110,21 +114,27 @@
 
 
 #pragma mark -
-#pragma mark ......:::::: implementation BaiDuXMLParseDelegate :::::::......
+#pragma mark ......:::::: Notifications :::::::......
 
-- (void)baiduXMLParseDidFinished:(DLBaiduAPIXMLParseOperation *)sender error:(NSError *)error {
+- (void)baiduXMLParseDidFinished:(NSNotification *)no {
+    NSError *error = [[no userInfo] objectForKey:DLErrorKey];
     if (error) {
         [self fetcherFinishedWithError:error];
+        return;
     }
-    else {
-        NSLog(@"lrcDownloadURLs:%@",[sender lrcsURLList]);
-        if ([[sender lrcsURLList] count] > 0) {
-            [self performSelector:@selector(startDownloadWithURL:)
-                         onThread:[NSThread mainThread]
-                       withObject:[[sender lrcsURLList] objectAtIndex:0]
-                    waitUntilDone:NO];
-        }
+    
+    NSArray *lrcsList = [[no userInfo] objectForKey:DLLRCURLListKey];
+    if (!lrcsList || [lrcsList count] <= 0) {
+        error = [NSError errorWithDomain:DLXMLParseErrorDomain code:CannotFindLRC userInfo:nil] ;
+        [self fetcherFinishedWithError:error];
+        return;
     }
+    
+    NSLog(@"lrcsList:%@",lrcsList);
+    [self performSelector:@selector(startDownloadWithURL:)
+                 onThread:[NSThread mainThread]
+               withObject:[lrcsList objectAtIndex:0]
+            waitUntilDone:NO];
 }
 
 #pragma mark -
