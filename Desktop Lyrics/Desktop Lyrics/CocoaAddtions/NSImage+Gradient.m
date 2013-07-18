@@ -11,6 +11,10 @@
 @implementation NSImage (Gradient)
 
 + (NSImage *)gradientImageWithColors:(NSArray *)gradientColors imageSize:(NSSize)imageSize {
+    if (gradientColors == nil || NSEqualSizes(imageSize, NSZeroSize)) {
+        return nil;
+    }
+    
     NSBitmapImageRep * bitmapRep = nil;
     NSImage *image = nil;
     

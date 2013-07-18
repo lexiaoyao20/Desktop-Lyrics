@@ -71,6 +71,13 @@ NSString const * GradientColorKey = @"GradientColor";
 //    [_textAttributeds setValue:shadow forKey:NSShadowAttributeName];
 //    SafeReleaseObj(shadow);
     
+    NSShadow *shadow = [[NSShadow alloc] init];
+	[shadow setShadowColor: [NSColor blackColor]];
+	[shadow setShadowBlurRadius: 1];
+	[shadow setShadowOffset: NSMakeSize( 0, -1)];
+    [_textAttributeds setValue:shadow forKey:NSShadowAttributeName];
+    SafeReleaseObj(shadow);
+    
     NSMutableParagraphStyle* paraStyle = [[NSMutableParagraphStyle alloc] init];
 	[paraStyle setAlignment:NSCenterTextAlignment];
 	[paraStyle setLineBreakMode:NSLineBreakByWordWrapping];

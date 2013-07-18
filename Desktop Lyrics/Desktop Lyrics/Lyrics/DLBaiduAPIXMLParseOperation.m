@@ -9,11 +9,14 @@
 #import "DLBaiduAPIXMLParseOperation.h"
 #import "DLDataDefine.h"
 
+NSString const * DLBaiDuAPIXMLParseDidFinishNotification = @"BaiDuAPIXMLParseDidFinish";
+
 @implementation DLBaiduAPIXMLParseOperation
 
 @synthesize delegate = _delegate;
 @synthesize requestURL = _requestURL;
 @synthesize lrcsURLList = _lrcsURLList;
+@synthesize songsURLList = _songsURLList;
 
 - (id)initWithRequestURL:(NSURL *)url {
     self = [super init];
@@ -81,8 +84,11 @@
                 if (lrcURL) {
                     [_lrcsURLList addObject:lrcURL];
                 }
+                
+                //解析歌曲下载地址
+                [self parseSongWithXMLElement:element];
             }
-        }
+    }
         
         if ([_lrcsURLList count] == 0) {
             NSError *error = [NSError errorWithDomain:DLXMLParseErrorDomain code:CannotFindLRC userInfo:nil] ;
@@ -94,6 +100,35 @@
     }
     [xmlDoc release];
     [pool release];
+}
+
+- (void)parseSongWithXMLElement:(NSXMLElement *)element {
+    NSArray *encodeArray = [element elementsForName:@"encode"];
+    NSArray *decodeArray = [element elementsForName:@"decode"];
+    
+    if (!encodeArray || decodeArray) {
+        return;
+    }
+    
+    NSXMLElement *encodeElement = [encodeArray objectAtIndex:0];
+    NSXMLElement *decodeElement = [decodeArray objectAtIndex:0];
+    if (encodeElement && decodeElement) {
+        NSString *encodeSong = [encodeElement stringValue];
+        NSString *decondeSong = [decodeElement stringValue];
+        NSRange range = [encodeSong rangeOfString:@"/" options:NSBackwardsSearch];
+        
+        if (range.location == NSNotFound || range.location < 1) {
+            return;
+        }
+        
+        NSString *temp = [encodeSong substringToIndex:range.location - 1];
+        
+        NSString *songLocation = [temp stringByAppendingString:decondeSong];
+        NSURL *songURL = [NSURL URLWithString:[songLocation stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        if (songURL) {
+            [_songsURLList addObject:songURL];
+        }
+    }
 }
 
 - (void)endParseWithError:(NSError *)error {

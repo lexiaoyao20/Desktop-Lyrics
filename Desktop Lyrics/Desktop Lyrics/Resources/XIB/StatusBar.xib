@@ -83,7 +83,7 @@
 						<reference key="NSOnImage" ref="921552057"/>
 						<reference key="NSMixedImage" ref="223495477"/>
 					</object>
-					<object class="NSMenuItem" id="283907988">
+					<object class="NSMenuItem" id="429235800">
 						<reference key="NSMenu" ref="973846789"/>
 						<bool key="NSIsDisabled">YES</bool>
 						<bool key="NSIsSeparator">YES</bool>
@@ -93,7 +93,7 @@
 						<reference key="NSOnImage" ref="921552057"/>
 						<reference key="NSMixedImage" ref="223495477"/>
 					</object>
-					<object class="NSMenuItem" id="985667204">
+					<object class="NSMenuItem" id="304462552">
 						<reference key="NSMenu" ref="973846789"/>
 						<string key="NSTitle">搜索</string>
 						<string key="NSKeyEquiv"/>
@@ -101,19 +101,19 @@
 						<reference key="NSOnImage" ref="921552057"/>
 						<reference key="NSMixedImage" ref="223495477"/>
 						<string key="NSAction">submenuAction:</string>
-						<object class="NSMenu" key="NSSubmenu" id="433390954">
+						<object class="NSMenu" key="NSSubmenu" id="777306784">
 							<string key="NSTitle">搜索</string>
 							<array class="NSMutableArray" key="NSMenuItems">
-								<object class="NSMenuItem" id="932030242">
-									<reference key="NSMenu" ref="433390954"/>
+								<object class="NSMenuItem" id="478148435">
+									<reference key="NSMenu" ref="777306784"/>
 									<string key="NSTitle">搜索歌曲...</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="921552057"/>
 									<reference key="NSMixedImage" ref="223495477"/>
 								</object>
-								<object class="NSMenuItem" id="324521238">
-									<reference key="NSMenu" ref="433390954"/>
+								<object class="NSMenuItem" id="680820500">
+									<reference key="NSMenu" ref="777306784"/>
 									<string key="NSTitle">搜索歌词...</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -169,7 +169,7 @@
 					</object>
 				</array>
 			</object>
-			<object class="NSMenuItem" id="753189809">
+			<object class="NSMenuItem" id="917717898">
 				<string key="NSTitle">Item</string>
 				<string key="NSKeyEquiv"/>
 				<int key="NSMnemonicLoc">2147483647</int>
@@ -244,6 +244,22 @@
 					<int key="connectionID">20</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">showSearchSongsWindow:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="478148435"/>
+					</object>
+					<int key="connectionID">27</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">showSearchLyricsWindow:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="680820500"/>
+					</object>
+					<int key="connectionID">28</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="973846789"/>
@@ -292,8 +308,8 @@
 							<reference ref="257682173"/>
 							<reference ref="479374417"/>
 							<reference ref="346537176"/>
-							<reference ref="985667204"/>
-							<reference ref="283907988"/>
+							<reference ref="304462552"/>
+							<reference ref="429235800"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -349,40 +365,40 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">21</int>
-						<reference key="object" ref="985667204"/>
+						<reference key="object" ref="304462552"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="433390954"/>
+							<reference ref="777306784"/>
 						</array>
 						<reference key="parent" ref="973846789"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">22</int>
-						<reference key="object" ref="433390954"/>
+						<reference key="object" ref="777306784"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="932030242"/>
-							<reference ref="324521238"/>
+							<reference ref="478148435"/>
+							<reference ref="680820500"/>
 						</array>
-						<reference key="parent" ref="985667204"/>
+						<reference key="parent" ref="304462552"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">23</int>
-						<reference key="object" ref="932030242"/>
-						<reference key="parent" ref="433390954"/>
+						<reference key="object" ref="478148435"/>
+						<reference key="parent" ref="777306784"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">24</int>
-						<reference key="object" ref="283907988"/>
+						<reference key="object" ref="429235800"/>
 						<reference key="parent" ref="973846789"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">25</int>
-						<reference key="object" ref="753189809"/>
+						<reference key="object" ref="917717898"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">26</int>
-						<reference key="object" ref="324521238"/>
-						<reference key="parent" ref="433390954"/>
+						<reference key="object" ref="680820500"/>
+						<reference key="parent" ref="777306784"/>
 					</object>
 				</array>
 			</object>
@@ -412,7 +428,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">26</int>
+			<int key="maxID">28</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -425,6 +441,8 @@
 						<string key="quit:">id</string>
 						<string key="showAboutWindow:">id</string>
 						<string key="showOrHideFloatWindow:">id</string>
+						<string key="showSearchLyricsWindow:">id</string>
+						<string key="showSearchSongsWindow:">id</string>
 						<string key="togglePlayPause:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -446,6 +464,14 @@
 						</object>
 						<object class="IBActionInfo" key="showOrHideFloatWindow:">
 							<string key="name">showOrHideFloatWindow:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showSearchLyricsWindow:">
+							<string key="name">showSearchLyricsWindow:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showSearchSongsWindow:">
+							<string key="name">showSearchSongsWindow:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="togglePlayPause:">

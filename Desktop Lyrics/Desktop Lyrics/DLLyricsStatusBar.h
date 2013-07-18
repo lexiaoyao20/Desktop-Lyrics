@@ -14,6 +14,7 @@
 @class DLLyricsStorage;
 @class LrcTokensPool;
 @class DLAboutWindowController;
+@class DLSearchWindowController;
 
 @interface DLLyricsStatusBar : NSObject<DLiTunesControlObserver,NSMenuDelegate,LRCFetcherDelegate> {
     IBOutlet NSMenu *_appMenu;
@@ -26,6 +27,7 @@
     DLLyricsStorage *_lyricsStorage;
     LrcTokensPool *_tokensPool;
     DLLRCFetcher *_lrcFetcher;
+    DLSearchWindowController    *_searchWndCtrl;
     
     NSUInteger _prevLrcItemId;
 }
@@ -43,5 +45,9 @@
 - (IBAction)showOrHideFloatWindow:(id)sender;
 
 - (IBAction)showAboutWindow:(id)sender;
+
+- (IBAction)showSearchLyricsWindow:(id)sender;
+
+- (IBAction)showSearchSongsWindow:(id)sender;
 
 @end

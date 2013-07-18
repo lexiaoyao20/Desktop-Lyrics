@@ -51,7 +51,7 @@
 //从歌词文件的默认保存路径寻找歌词文件
 - (NSString *)findLocalLyricWithTitle:(NSString *)title artist:(NSString *)artist {
     NSString *lrcFileName = [NSString stringWithFormat:@"%@-%@%@", artist,title,LRCPATHEXTENSION];
-    NSString *lyricSavePath = [[NSUserDefaults standardUserDefaults] objectForKey:kLyricFileSavePath];
+    NSString *lyricSavePath = [[NSUserDefaults standardUserDefaults] objectForKey:kUDKLyricFileSavePath];
     NSString *lyricPath = [lyricSavePath stringByAppendingPathComponent:lrcFileName];
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:lyricPath]) {

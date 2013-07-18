@@ -18,16 +18,14 @@
 
 @implementation DLLRCFetcher 
 
-@synthesize artist = _artist;
-@synthesize title = _title;
 @synthesize delegate = _delegate;
 @synthesize lrcFilePath = _lrcFilePath;
 
 - (id)initWithArtist:(NSString *)artist title:(NSString *)title {
     self = [super init];
     if (self && artist && title) {
-        self.artist = [artist stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        self.title = [title stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        self.artist = artist;
+        self.title = title;
         _operationQueue = [[NSOperationQueue alloc] init];
     }
     else {
@@ -48,7 +46,7 @@
 }
 
 - (void)start {
-    NSString *query = [NSString stringWithFormat:kLRCBaiDuAPISearchURL,self.title,self.artist];
+    NSString *query = [NSString stringWithFormat:kDLBaiDuAPISearchLyricsURL,self.title,self.artist];
     NSString *encodeQuery = [query stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSLog(@"query:%@",encodeQuery);
     NSURL *url = [NSURL URLWithString:encodeQuery];
@@ -68,6 +66,30 @@
     }
 }
 
+@dynamic artist;
+- (NSString *)artist {
+    return _artist;
+}
+
+- (void)setArtist:(NSString *)artist {
+    artist = [artist stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    [artist copy];
+    [_artist release];
+    _artist = artist;
+}
+
+@dynamic title;
+- (NSString *)title {
+    return _title;
+}
+
+- (void)setTitle:(NSString *)title {
+    title = [title stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    [title copy];
+    [_title release];
+    _title = title;
+}
+
 #pragma mark -
 #pragma mark .....:::::: Private Method ::::::..... 
 
@@ -80,7 +102,7 @@
     _download = [[DLDownload alloc] initWithDownloadURL:downloadURl];
     [_download setDelegate:self];
     NSString *lrcFileName = [NSString stringWithFormat:@"%@-%@%@", self.artist,self.title,LRCPATHEXTENSION];
-    NSString *lrcSavePath = [[NSUserDefaults standardUserDefaults] objectForKey:kLyricFileSavePath];
+    NSString *lrcSavePath = [[NSUserDefaults standardUserDefaults] objectForKey:kUDKLyricFileSavePath];
     [_download setFileName:lrcFileName];
     [_download setSavePath:lrcSavePath];
     [_download start];

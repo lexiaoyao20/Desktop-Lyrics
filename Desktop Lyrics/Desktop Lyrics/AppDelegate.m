@@ -25,7 +25,7 @@
     
     [[NSUserDefaults standardUserDefaults]
 	 registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
-					   lyricSavePath, kLyricFileSavePath,
+					   lyricSavePath, kUDKLyricFileSavePath,
                        [NSNumber numberWithBool:YES],kUDKShowFloatWindow,
 					   nil]];
 }

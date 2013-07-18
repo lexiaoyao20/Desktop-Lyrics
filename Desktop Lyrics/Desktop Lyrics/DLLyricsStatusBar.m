@@ -12,10 +12,13 @@
 #import "LrcTokensPool.h"
 #import "DLDataDefine.h"
 #import "DLAboutWindowController.h"
+#import "DLSearchWindowController.h"
 
 @interface DLLyricsStatusBar ()
 
 - (void)startParseLrcFile:(NSString *)lrcFilePath ;
+
+- (void)showSearchWindowWithType:(DLSearchType)searchType;
 
 @end
 
@@ -95,6 +98,14 @@
         _aboutWndCtrl = [[DLAboutWindowController alloc] init];
     }
     [_aboutWndCtrl.window makeKeyAndOrderFront:nil];
+}
+
+- (IBAction)showSearchLyricsWindow:(id)sender  {
+    [self showSearchWindowWithType:SearchLyrics];
+}
+
+- (IBAction)showSearchSongsWindow:(id)sender {
+    [self showSearchWindowWithType:SearchSongs];
 }
 
 #pragma mark -
@@ -230,6 +241,21 @@
         SafeReleaseObj(_tokensPool);
     }
     _tokensPool = [[LrcTokensPool alloc] initWithFilePathAndParseLyrics:lrcFilePath];
+}
+
+- (void)showSearchWindowWithType:(DLSearchType)searchType {
+    if (!_searchWndCtrl) {
+        _searchWndCtrl = [[DLSearchWindowController alloc] initWithiTunesControl:_iTunesControl];
+    }
+    
+    [_searchWndCtrl setSearchType:searchType];
+    
+    if ([_iTunesControl currentTrack]) {
+        [_searchWndCtrl showWindowWithTitle:[_iTunesControl currentTrack].name artist:[_iTunesControl currentTrack].artist];
+    }
+    else {
+        [_searchWndCtrl showWindowWithTitle:@"" artist:@""];
+    }
 }
 
 @end

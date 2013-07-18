@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		930F59A6179787DA00F358E1 /* SearchWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930F59A5179787DA00F358E1 /* SearchWindow.xib */; };
 		930F59AA1797890B00F358E1 /* NSImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 930F59A91797890B00F358E1 /* NSImage+Gradient.m */; };
+		930F59B01797916A00F358E1 /* DLSearchWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930F59AF1797916A00F358E1 /* DLSearchWindowController.m */; };
+		930F59B31797919200F358E1 /* DLBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 930F59B21797919200F358E1 /* DLBackgroundView.m */; };
+		930F59CC1797E58D00F358E1 /* DLSongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 930F59CB1797E58D00F358E1 /* DLSongModel.m */; };
 		931C8A8817954CD100B6F62F /* DLLyricsFloatWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 931C8A8417954CD100B6F62F /* DLLyricsFloatWindow.m */; };
 		931C8A8917954CD100B6F62F /* DLLyricsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 931C8A8717954CD100B6F62F /* DLLyricsView.m */; };
 		93243E1D178465D000B975E4 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93243E1C178465D000B975E4 /* ScriptingBridge.framework */; };
@@ -60,6 +63,12 @@
 		930F59A5179787DA00F358E1 /* SearchWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchWindow.xib; sourceTree = "<group>"; };
 		930F59A81797890B00F358E1 /* NSImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Gradient.h"; sourceTree = "<group>"; };
 		930F59A91797890B00F358E1 /* NSImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Gradient.m"; sourceTree = "<group>"; };
+		930F59AE1797916A00F358E1 /* DLSearchWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSearchWindowController.h; sourceTree = "<group>"; };
+		930F59AF1797916A00F358E1 /* DLSearchWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSearchWindowController.m; sourceTree = "<group>"; };
+		930F59B11797919200F358E1 /* DLBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBackgroundView.h; sourceTree = "<group>"; };
+		930F59B21797919200F358E1 /* DLBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBackgroundView.m; sourceTree = "<group>"; };
+		930F59CA1797E58D00F358E1 /* DLSongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSongModel.h; sourceTree = "<group>"; };
+		930F59CB1797E58D00F358E1 /* DLSongModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSongModel.m; sourceTree = "<group>"; };
 		931C8A8317954CD100B6F62F /* DLLyricsFloatWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLyricsFloatWindow.h; sourceTree = "<group>"; };
 		931C8A8417954CD100B6F62F /* DLLyricsFloatWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLyricsFloatWindow.m; sourceTree = "<group>"; };
 		931C8A8517954CD100B6F62F /* DLLyricsFloatWndController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLyricsFloatWndController.h; sourceTree = "<group>"; };
@@ -136,8 +145,21 @@
 		930F59AC17978DFB00F358E1 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				930F59B11797919200F358E1 /* DLBackgroundView.h */,
+				930F59B21797919200F358E1 /* DLBackgroundView.m */,
 			);
 			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		930F59AD1797913800F358E1 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				930F59AE1797916A00F358E1 /* DLSearchWindowController.h */,
+				930F59AF1797916A00F358E1 /* DLSearchWindowController.m */,
+				930F59CA1797E58D00F358E1 /* DLSongModel.h */,
+				930F59CB1797E58D00F358E1 /* DLSongModel.m */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		9326EF391785B61000F9069A /* iTunesControl */ = {
@@ -183,6 +205,7 @@
 				93EC4B6F178DAA3700DD5A7B /* LyricsParse */,
 				93FB21E9179069F400394BC2 /* Download */,
 				9352245F178AFFA0001DE7C4 /* LyricShow */,
+				930F59AD1797913800F358E1 /* Search */,
 				9395799D179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.h */,
 				9395799E179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m */,
 				93FB21E617905AC500394BC2 /* DLLRCFetcher.h */,
@@ -440,6 +463,9 @@
 				931C8A8817954CD100B6F62F /* DLLyricsFloatWindow.m in Sources */,
 				931C8A8917954CD100B6F62F /* DLLyricsView.m in Sources */,
 				930F59AA1797890B00F358E1 /* NSImage+Gradient.m in Sources */,
+				930F59B01797916A00F358E1 /* DLSearchWindowController.m in Sources */,
+				930F59B31797919200F358E1 /* DLBackgroundView.m in Sources */,
+				930F59CC1797E58D00F358E1 /* DLSongModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
