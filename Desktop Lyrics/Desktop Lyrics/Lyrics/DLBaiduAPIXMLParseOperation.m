@@ -27,6 +27,7 @@ NSString const * DLErrorKey = @"ErrorKey";
         self.requestURL = url;
         _searchCount = 0;
         _lrcsURLList = [[NSMutableArray alloc] init];
+        _songsURLList = [[NSMutableArray alloc] init];
     }
     else {
         [self release];
@@ -40,6 +41,7 @@ NSString const * DLErrorKey = @"ErrorKey";
 {
     [_lrcsURLList release];
     [_requestURL release];
+    [_songsURLList release];
     
     [super dealloc];
 }
@@ -83,34 +85,8 @@ NSString const * DLErrorKey = @"ErrorKey";
                 }
             }
             else if ([[element name] isEqualToString:@"url"]) {
-                NSArray *lrcIDArray = [element elementsForName:@"lrcid"];
-                if (!lrcIDArray || [lrcIDArray count] == 0) {
-                    continue;
-                }
-                
-                NSXMLElement *lycidElement = [lrcIDArray objectAtIndex:0];
-                if (!lycidElement) {
-                    continue;
-                }
-                
-                long lycid = (long)[[lycidElement stringValue] longLongValue];
-                
-                if (lycid == 0) {
-                    continue;
-                }
-                
-                long lycDir = lycid / 100;
-                NSString *lrcLocation = [NSString stringWithFormat:@"%@/%ld/%ld.lrc",kLRCDownloadPrefix,lycDir,lycid];
-                NSString *encodeString = [lrcLocation stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-                
-                if (!encodeString) {
-                    continue;
-                }
-                
-                NSURL *lrcURL = [NSURL URLWithString:encodeString];
-                if (lrcURL) {
-                    [_lrcsURLList addObject:lrcURL];
-                }
+                //解析歌词下载地址
+                [self parseLyricsWithXMLElement:element];
                 
                 //解析歌曲下载地址
                 [self parseSongWithXMLElement:element];
@@ -122,11 +98,40 @@ NSString const * DLErrorKey = @"ErrorKey";
         [[NSNotificationCenter defaultCenter] postNotificationName:DLBaiDuAPIXMLParseDidFinishNotification
                                                             object:self
                                                           userInfo:userInfo];
-        
-    
     }
     [xmlDoc release];
     [pool release];
+}
+
+- (void)parseLyricsWithXMLElement:(NSXMLElement *)element {
+    NSArray *lrcIDArray = [element elementsForName:@"lrcid"];
+    if (!lrcIDArray || [lrcIDArray count] == 0) {
+        return;
+    }
+    
+    NSXMLElement *lycidElement = [lrcIDArray objectAtIndex:0];
+    if (!lycidElement) {
+        return;
+    }
+    
+    long lycid = (long)[[lycidElement stringValue] longLongValue];
+    
+    if (lycid == 0) {
+        return;
+    }
+    
+    long lycDir = lycid / 100;
+    NSString *lrcLocation = [NSString stringWithFormat:@"%@/%ld/%ld.lrc",kLRCDownloadPrefix,lycDir,lycid];
+    NSString *encodeString = [lrcLocation stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    if (!encodeString) {
+        return;
+    }
+    
+    NSURL *lrcURL = [NSURL URLWithString:encodeString];
+    if (lrcURL) {
+        [_lrcsURLList addObject:lrcURL];
+    }
 }
 
 - (void)parseSongWithXMLElement:(NSXMLElement *)element {

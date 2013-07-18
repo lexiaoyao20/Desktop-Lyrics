@@ -9,7 +9,7 @@
 #import "DLLyricsView.h"
 #import "NSColor+CGColor.h"
 
-#define ShowLRCTimeInterval (1.0 / 30.0)
+#define ShowLRCTimeInterval 0.05
 #define DefaultFontName @"Verdana"
 #define DefaultFontSize 32
 

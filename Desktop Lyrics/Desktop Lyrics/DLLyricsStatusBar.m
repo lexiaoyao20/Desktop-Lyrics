@@ -141,16 +141,15 @@
 }
 
 - (void)iTunesPlayDidPaused:(iTunesTrack *)track {
-    [_playPauseMenuItem setTitle:NSLocalizedString(@"播放", @"播放")];
+
 }
 
 - (void)iTunesPlayDidResumed:(iTunesTrack *)track {
-    [_playPauseMenuItem setTitle:NSLocalizedString(@"暂停", @"暂停")];
+
 }
 
 - (void)iTunesPlayDidStoped {
     _prevLrcItemId = -1;
-    [_playPauseMenuItem setTitle:NSLocalizedString(@"播放", @"播放")];
 }
 
 - (void)iTunesTrack:(iTunesTrack *)track didChangedProgress:(double)progress {
@@ -199,9 +198,17 @@
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem {
     BOOL result = YES;
     SEL action = [menuItem action];
-    if (action == @selector(togglePlayPause:) ||
-        action == @selector(playPrevious:)    ||
+    if (action == @selector(playPrevious:)    ||
         action == @selector(playNext:)) {
+        result = [_iTunesControl isRunning];
+    }
+    else if (action == @selector(togglePlayPause:)) {
+        if ([_iTunesControl playerState] == iTunesEPlSPlaying) {
+            [menuItem setTitle:@"暂停"];
+        }
+        else {
+            [menuItem setTitle:@"播放"];
+        }
         result = [_iTunesControl isRunning];
     }
     else if (action == @selector(showOrHideFloatWindow:)) {

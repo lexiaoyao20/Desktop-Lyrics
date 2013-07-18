@@ -8,6 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface DLAboutWindowController : NSWindowController
+@class DLBackgroundView;
+
+@interface DLAboutWindowController : NSWindowController {
+    IBOutlet DLBackgroundView   *_backgroundView;
+}
 
 @end

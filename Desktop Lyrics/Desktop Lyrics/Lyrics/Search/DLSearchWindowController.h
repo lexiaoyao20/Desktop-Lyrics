@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "DLiTunesControl.h"
 #import "DLDataDefine.h"
-#import "DLBaiduAPIXMLParseOperation.h"
+
 
 @class DLBackgroundView;
 
@@ -26,6 +26,7 @@
     DLSearchType                _searchType;
     
     NSOperationQueue            *_operationQueue;
+    NSArray                     *_dataSource;
 }
 
 @property (nonatomic) DLSearchType searchType;
