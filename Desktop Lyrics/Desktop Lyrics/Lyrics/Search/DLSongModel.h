@@ -12,11 +12,13 @@
     NSString *_title;
     NSString *_artist;
     NSURL    *_downloadURL;
+    NSString *_fileType;
 }
 
 @property (nonatomic,copy) NSString *title;
 @property (nonatomic,copy) NSString *artist;
 @property (nonatomic,retain) NSURL *downloadURL;
+@property (nonatomic,copy) NSString *fileType;
 
 - (DLSongModel *)initWithTitle:(NSString *)title artist:(NSString *)artist;
 

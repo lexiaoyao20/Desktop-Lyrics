@@ -47,6 +47,8 @@
  */
 - (double)playProgress;
 
+- (iTunesTrack *)addFile:(NSString *)filePath;
+
 #pragma mark -
 #pragma mark ......:::::: Observer Manager :::::::......
 

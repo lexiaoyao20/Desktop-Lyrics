@@ -23,7 +23,6 @@ enum {
     id<DLDownloadDelegate> _delegate;
     
     unsigned long long _fileSize;
-    BOOL        _overwrite;
     
 @private
     NSString        *_destPath;                 //目标路径
@@ -41,10 +40,6 @@ enum {
 @property (nonatomic,copy)      NSString    *savePath;
 
 @property (nonatomic,readonly)  unsigned long long fileSize;   //下载文件的大小
-/*
- 当文件名相同时是否覆盖,overwriter为NO的时候，当文件已经存在，则下载结束
- */
-@property (nonatomic,assign)    BOOL        overwrite;
 
 @property (nonatomic,assign)    id<DLDownloadDelegate>    delegate;
 
@@ -78,6 +73,9 @@ enum {
 
 @protocol DLDownloadDelegate <NSObject>
 
+//是否需要覆盖已经存在的文件
+- (BOOL)shouldOverwriteExistFile:(NSString *)filePath;
+
 @optional
 
 //下载开始(responseHeaders为服务器返回的下载文件的信息)
@@ -88,6 +86,7 @@ enum {
 - (void)downloadDidFinished:(DLDownload *)aDownload;
 //更新下载的进度 -- 进度范围为0 - 100
 - (void)downloadProgressDidChange:(DLDownload *)aDownload progress:(double)newProgress;
+
 
 @end
 

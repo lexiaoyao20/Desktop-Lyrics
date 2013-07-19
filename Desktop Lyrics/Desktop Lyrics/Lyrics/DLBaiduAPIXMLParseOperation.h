@@ -17,11 +17,13 @@
     NSInteger  _searchCount;
     NSMutableArray *_lrcsURLList;
     NSMutableArray *_songsURLList;
+    NSString *_fileType;
 }
 
 @property (nonatomic,retain) NSURL *requestURL;
 @property (nonatomic,readonly) NSArray *lrcsURLList;
 @property (nonatomic,readonly) NSMutableArray *songsURLList;
+@property (nonatomic,readonly) NSString *fileType;
 
 - (id)initWithRequestURL:(NSURL *)url;
 
@@ -33,4 +35,5 @@ extern NSString * DLBaiDuAPIXMLParseDidFinishNotification;
 extern NSString const * DLLRCURLListKey ;
 extern NSString const * DLSongsURLListKey;
 extern NSString const * DLErrorKey;
+extern NSString const * DLSongFileTypeKey;
 

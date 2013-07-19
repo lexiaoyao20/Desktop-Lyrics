@@ -13,6 +13,20 @@ NSString * DLBaiDuAPIXMLParseDidFinishNotification = @"BaiDuAPIXMLParseDidFinish
 NSString const * DLLRCURLListKey = @"LRCURLListKey";
 NSString const * DLSongsURLListKey = @"SongsURLListKey";
 NSString const * DLErrorKey = @"ErrorKey";
+NSString const * DLSongFileTypeKey = @"SongFileTypeKey";
+
+
+@interface DLBaiduAPIXMLParseOperation ()
+
+//解析歌词下载地址
+- (void)parseLyricsWithXMLElement:(NSXMLElement *)element;
+
+//解析歌曲下载地址
+- (void)parseSongWithXMLElement:(NSXMLElement *)element ;
+
+- (void)setFileType:(NSString *)aType;
+
+@end
 
 @implementation DLBaiduAPIXMLParseOperation
 
@@ -20,6 +34,7 @@ NSString const * DLErrorKey = @"ErrorKey";
 @synthesize requestURL = _requestURL;
 @synthesize lrcsURLList = _lrcsURLList;
 @synthesize songsURLList = _songsURLList;
+@synthesize fileType = _fileType;
 
 - (id)initWithRequestURL:(NSURL *)url {
     self = [super init];
@@ -42,6 +57,7 @@ NSString const * DLErrorKey = @"ErrorKey";
     [_lrcsURLList release];
     [_requestURL release];
     [_songsURLList release];
+    [_fileType release];
     
     [super dealloc];
 }
@@ -91,10 +107,17 @@ NSString const * DLErrorKey = @"ErrorKey";
                 //解析歌曲下载地址
                 [self parseSongWithXMLElement:element];
             }
+            else if ([[element name] isEqualToString:@"p2p"]) {
+                NSArray *typeList = [element elementsForName:@"type"];
+                if (typeList && [typeList count] > 0) {
+                    [self setFileType:[NSString stringWithFormat:@".%@",[[typeList objectAtIndex:0] stringValue]]];
+                }
+            }
         }
         
         userInfo = [NSDictionary dictionaryWithObjectsAndKeys:_lrcsURLList,DLLRCURLListKey,
-                    _songsURLList,DLSongsURLListKey, nil];
+                    _songsURLList,DLSongsURLListKey, 
+                    _fileType,DLSongFileTypeKey,nil];
         [[NSNotificationCenter defaultCenter] postNotificationName:DLBaiDuAPIXMLParseDidFinishNotification
                                                             object:self
                                                           userInfo:userInfo];
@@ -102,6 +125,9 @@ NSString const * DLErrorKey = @"ErrorKey";
     [xmlDoc release];
     [pool release];
 }
+
+#pragma mark -
+#pragma mark ......:::::: Private Method :::::::......
 
 - (void)parseLyricsWithXMLElement:(NSXMLElement *)element {
     NSArray *lrcIDArray = [element elementsForName:@"lrcid"];
@@ -153,7 +179,7 @@ NSString const * DLErrorKey = @"ErrorKey";
             return;
         }
         
-        NSString *temp = [encodeSong substringToIndex:range.location - 1];
+        NSString *temp = [encodeSong substringToIndex:range.location + 1];
         
         NSString *songLocation = [temp stringByAppendingString:decondeSong];
         NSURL *songURL = [NSURL URLWithString:[songLocation stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
@@ -161,6 +187,12 @@ NSString const * DLErrorKey = @"ErrorKey";
             [_songsURLList addObject:songURL];
         }
     }
+}
+
+- (void)setFileType:(NSString *)aType {
+    [aType retain];
+    [_fileType release];
+    _fileType = aType;
 }
 
 @end

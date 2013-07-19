@@ -8,6 +8,7 @@
 
 #import "DLLyricsStorage.h"
 #import "DLDataDefine.h"
+#import "NSString+Additions.h"
 
 
 @interface DLLyricsStorage ()
@@ -50,7 +51,7 @@
 
 //从歌词文件的默认保存路径寻找歌词文件
 - (NSString *)findLocalLyricWithTitle:(NSString *)title artist:(NSString *)artist {
-    NSString *lrcFileName = [NSString stringWithFormat:@"%@-%@%@", artist,title,LRCPATHEXTENSION];
+    NSString *lrcFileName = [NSString fileNameWithTitle:title artist:artist pathExtention:LRCPATHEXTENSION];
     NSString *lyricSavePath = [[NSUserDefaults standardUserDefaults] objectForKey:kUDKLyricFileSavePath];
     NSString *lyricPath = [lyricSavePath stringByAppendingPathComponent:lrcFileName];
     

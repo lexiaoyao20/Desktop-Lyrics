@@ -153,17 +153,20 @@
 }
 
 - (void)iTunesTrack:(iTunesTrack *)track didChangedProgress:(double)progress {
-    NSString *lyricPath = [_lyricsStorage findLocalLyricWithTrack:track];
-    if (lyricPath) {
-        if (!_tokensPool || ![_tokensPool isLRCDidParsed:lyricPath]) {
-            [self startParseLrcFile:lyricPath];
+
+    if (!_tokensPool || [[_tokensPool lyrics] count] == 0) {
+        NSString *lyricPath = [_lyricsStorage findLocalLyricWithTrack:track];
+        if (lyricPath) {
+            if (!_tokensPool || ![_tokensPool isLRCDidParsed:lyricPath]) {
+                [self startParseLrcFile:lyricPath];
+            }
         }
-    }
-    else {  //在本地没有找到歌词文件，则自动去搜索下载...
-        if (!_lrcFetcher) {
-            _lrcFetcher = [[DLLRCFetcher alloc] initWithArtist:track.artist title:track.name];
-            [_lrcFetcher setDelegate:self];
-            [_lrcFetcher start];
+        else {  //在本地没有找到歌词文件，则自动去搜索下载...
+            if (!_lrcFetcher) {
+                _lrcFetcher = [[DLLRCFetcher alloc] initWithArtist:track.artist title:track.name];
+                [_lrcFetcher setDelegate:self];
+                [_lrcFetcher start];
+            }
         }
     }
     

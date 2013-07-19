@@ -9,6 +9,7 @@
 #import "DLLRCFetcher.h"
 #import "DLDataDefine.h"
 #import "DLBaiduAPIXMLParseOperation.h"
+#import "NSString+Additions.h"
 
 @interface DLLRCFetcher ()
 
@@ -104,8 +105,8 @@
     }
     
     _download = [[DLDownload alloc] initWithDownloadURL:downloadURl];
-    [_download setDelegate:self];
-    NSString *lrcFileName = [NSString stringWithFormat:@"%@-%@%@", self.artist,self.title,LRCPATHEXTENSION];
+    [_download setDelegate:self]; 
+    NSString *lrcFileName = [NSString fileNameWithTitle:self.title artist:self.artist pathExtention:LRCPATHEXTENSION];
     NSString *lrcSavePath = [[NSUserDefaults standardUserDefaults] objectForKey:kUDKLyricFileSavePath];
     [_download setFileName:lrcFileName];
     [_download setSavePath:lrcSavePath];
@@ -152,6 +153,11 @@
     _lrcFilePath = downloadFilePath;
     
     [self fetcherFinishedWithError:nil];
+}
+
+//是否需要覆盖已经存在的文件
+- (BOOL)shouldOverwriteExistFile:(NSString *)filePath {
+    return YES;
 }
 
 - (void)fetcherFinishedWithError:(NSError *)error {

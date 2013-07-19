@@ -7,6 +7,7 @@
 //
 
 #import "DLSongModel.h"
+#import "DLDataDefine.h"
 
 
 @implementation DLSongModel
@@ -14,11 +15,13 @@
 @synthesize title = _title;
 @synthesize artist = _artist;
 @synthesize downloadURL = _downloadURL;
+@synthesize fileType = _fileType;
 
 - (DLSongModel *)initWithTitle:(NSString *)title artist:(NSString *)artist {
     if (self = [super init]) {
         self.title = title;
         self.artist = artist;
+        self.fileType = LRCPATHEXTENSION;
     }
     
     return self;
@@ -29,6 +32,7 @@
     [_title release];   _title = nil;
     [_artist release];  _title = nil;
     [_downloadURL release]; _downloadURL = nil;
+    [_fileType release];    _fileType = nil;
     [super dealloc];
 }
 

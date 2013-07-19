@@ -106,6 +106,15 @@ static NSString *iTunesPlayInfoNotification = @"com.apple.iTunes.playerInfo";
     return [_iTunes playerPosition];
 }
 
+- (iTunesTrack *)addFile:(NSString *)filePath {
+    NSURL *url = [NSURL fileURLWithPath:filePath];
+    if (url) {
+        return [_iTunes add:[NSArray arrayWithObject:url] to:nil];
+    }
+    
+    return nil;
+}
+
 @dynamic playerState;
 - (iTunesEPlS)playerState {
     return [_iTunes playerState];

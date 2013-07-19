@@ -15,7 +15,7 @@ NSString * const kUDKShowFloatWindow = @"ShowFloatWindow";
 //歌曲名+艺术家名
 NSString * const kDLBaiDuAPISearchLyricsURL = @"http://box.zhangmen.baidu.com/x?op=12&count=1&title=%@$$%@$$$$";
 
-NSString * const kDLBaiDuAPISearchSongsURL = @"http://box.zhangmen.baidu.com/x?op=12&count=1&title=%@$$%@$";
+NSString * const kDLBaiDuAPISearchSongsURL = @"http://box.zhangmen.baidu.com/x?op=12&count=1&title=%@$$%@";
 
 NSString * const kLRCDownloadPrefix = @"http://box.zhangmen.baidu.com/bdlrc";
 

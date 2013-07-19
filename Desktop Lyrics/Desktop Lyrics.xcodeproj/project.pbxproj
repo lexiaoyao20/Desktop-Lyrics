@@ -20,6 +20,7 @@
 		9326EF411785B62200F9069A /* DLiTunesControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9326EF3E1785B62200F9069A /* DLiTunesControl.m */; };
 		9326EF481785BBB800F9069A /* StatusBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9326EF471785BBB800F9069A /* StatusBar.xib */; };
 		9326EF4B1785BCE800F9069A /* DLLyricsStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9326EF4A1785BCE800F9069A /* DLLyricsStatusBar.m */; };
+		93422D511798DB0800253CE6 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 93422D501798DB0800253CE6 /* NSString+Additions.m */; };
 		93522464178AFFA0001DE7C4 /* LrcToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 9352245C178AFFA0001DE7C4 /* LrcToken.m */; };
 		93522465178AFFA0001DE7C4 /* LrcTokensPool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9352245E178AFFA0001DE7C4 /* LrcTokensPool.mm */; };
 		93522467178AFFA0001DE7C4 /* DLLyricsFloatWndController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93522463178AFFA0001DE7C4 /* DLLyricsFloatWndController.m */; };
@@ -86,6 +87,8 @@
 		9326EF471785BBB800F9069A /* StatusBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusBar.xib; sourceTree = "<group>"; };
 		9326EF491785BCE800F9069A /* DLLyricsStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLyricsStatusBar.h; sourceTree = "<group>"; };
 		9326EF4A1785BCE800F9069A /* DLLyricsStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLyricsStatusBar.m; sourceTree = "<group>"; };
+		93422D4F1798DB0800253CE6 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		93422D501798DB0800253CE6 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		9352245B178AFFA0001DE7C4 /* LrcToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LrcToken.h; sourceTree = "<group>"; };
 		9352245C178AFFA0001DE7C4 /* LrcToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LrcToken.m; sourceTree = "<group>"; };
 		9352245D178AFFA0001DE7C4 /* LrcTokensPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LrcTokensPool.h; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 				93EC4B6B178D9F8A00DD5A7B /* NSColor+CGColor.m */,
 				930F59A81797890B00F358E1 /* NSImage+Gradient.h */,
 				930F59A91797890B00F358E1 /* NSImage+Gradient.m */,
+				93422D4F1798DB0800253CE6 /* NSString+Additions.h */,
+				93422D501798DB0800253CE6 /* NSString+Additions.m */,
 			);
 			path = CocoaAddtions;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				930F59B01797916A00F358E1 /* DLSearchWindowController.m in Sources */,
 				930F59B31797919200F358E1 /* DLBackgroundView.m in Sources */,
 				930F59CC1797E58D00F358E1 /* DLSongModel.m in Sources */,
+				93422D511798DB0800253CE6 /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

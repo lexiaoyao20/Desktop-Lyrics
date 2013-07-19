@@ -23,7 +23,6 @@
 @synthesize fileName    = _fileName;
 @synthesize savePath    = _savePath;
 @synthesize fileSize    = _fileSize;
-@synthesize overwrite   = _overwrite;
 @synthesize delegate    = _delegate;
 
 @synthesize destPath = _destPath;
@@ -32,7 +31,6 @@
 - (id)initWithDownloadURL:(NSURL *)aURL {
     if (self = [super init]) {
         self.downloadURL = aURL;
-        _overwrite = YES;
     }
     
     return self;
@@ -86,7 +84,7 @@
     //处理如果文件已经存在的情况
     if ([[NSFileManager defaultManager] fileExistsAtPath:_destPath])
     {
-        if (_overwrite)
+        if (_delegate && [_delegate shouldOverwriteExistFile:_destPath])
         {
             [[NSFileManager defaultManager] removeItemAtPath:_destPath error:nil];
         }else

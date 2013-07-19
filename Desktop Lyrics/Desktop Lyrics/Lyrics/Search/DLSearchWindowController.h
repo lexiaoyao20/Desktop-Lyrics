@@ -9,12 +9,12 @@
 #import <Cocoa/Cocoa.h>
 #import "DLiTunesControl.h"
 #import "DLDataDefine.h"
-
+#import "DLDownload.h"
 
 @class DLBackgroundView;
 
 
-@interface DLSearchWindowController : NSWindowController<NSTableViewDataSource> {
+@interface DLSearchWindowController : NSWindowController<NSTableViewDataSource,DLDownloadDelegate> {
     IBOutlet DLBackgroundView   *_backgroundView;
     IBOutlet NSTextField        *_titleTxt;
     IBOutlet NSTextField        *_artistTxt;
@@ -22,6 +22,7 @@
     IBOutlet NSTableView        *_tableView;
     
     DLiTunesControl             *_iTunesControl;
+    DLDownload                  *_download;
     
     DLSearchType                _searchType;
     
@@ -36,5 +37,9 @@
 - (void)showWindowWithTitle:(NSString *)title artist:(NSString *)artist;
 
 - (IBAction)startSearch:(id)sender;
+
+- (IBAction)startDownload:(id)sender;
+
+- (IBAction)cancel:(id)sender;
 
 @end
