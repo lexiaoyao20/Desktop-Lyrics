@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9302878817A9FAF60030A331 /* Desktop Lyrics for iTunes.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9302878717A9FAF60030A331 /* Desktop Lyrics for iTunes.bundle */; };
+		9302878F17A9FCFD0030A331 /* PkgInfo in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9302877D17A9EC750030A331 /* PkgInfo */; };
 		930F59A6179787DA00F358E1 /* SearchWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930F59A5179787DA00F358E1 /* SearchWindow.xib */; };
 		930F59AA1797890B00F358E1 /* NSImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 930F59A91797890B00F358E1 /* NSImage+Gradient.m */; };
 		930F59B01797916A00F358E1 /* DLSearchWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930F59AF1797916A00F358E1 /* DLSearchWindowController.m */; };
@@ -28,6 +30,9 @@
 		9352246D178B002A001DE7C4 /* UniversalDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9352246B178B001F001DE7C4 /* UniversalDetector.framework */; };
 		9363D56417944EC600C37DAB /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9363D56317944EC600C37DAB /* About.xib */; };
 		9363D5681794569500C37DAB /* DLAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9363D5671794569500C37DAB /* DLAboutWindowController.m */; };
+		9378A63317A8F21F00A3DF74 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F9F916178324CF00F553B0 /* Cocoa.framework */; };
+		9378A63917A8F21F00A3DF74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9378A63717A8F21F00A3DF74 /* InfoPlist.strings */; };
+		9378A64417A8F27000A3DF74 /* PluginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9378A64317A8F27000A3DF74 /* PluginController.m */; };
 		93833D0D1796B9A5000AAE4E /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 93833D0C1796B9A5000AAE4E /* icon.icns */; };
 		9395799F179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9395799E179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m */; };
 		93D2ECD9178F04B600B5C039 /* VOutTextRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2ECD8178F04B600B5C039 /* VOutTextRender.m */; };
@@ -46,7 +51,37 @@
 		93FB21EC17906A4A00394BC2 /* DLDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FB21EB17906A4A00394BC2 /* DLDownload.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9302878417A9F9A50030A331 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93F9F90B178324CF00F553B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9378A63117A8F21F00A3DF74;
+			remoteInfo = "Desktop Lyrics for iTunes";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		9302878017A9ECBC0030A331 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ..;
+			dstSubfolderSpec = 7;
+			files = (
+				9302878F17A9FCFD0030A331 /* PkgInfo in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9302878617A9FA8A0030A331 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				9302878817A9FAF60030A331 /* Desktop Lyrics for iTunes.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9352246A178B0008001DE7C4 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,6 +96,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9302877D17A9EC750030A331 /* PkgInfo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PkgInfo; sourceTree = "<group>"; };
+		9302878717A9FAF60030A331 /* Desktop Lyrics for iTunes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "Desktop Lyrics for iTunes.bundle"; path = "../build/Release/Desktop Lyrics for iTunes.bundle"; sourceTree = "<group>"; };
 		930F59A5179787DA00F358E1 /* SearchWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchWindow.xib; sourceTree = "<group>"; };
 		930F59A81797890B00F358E1 /* NSImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Gradient.h"; sourceTree = "<group>"; };
 		930F59A91797890B00F358E1 /* NSImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Gradient.m"; sourceTree = "<group>"; };
@@ -98,6 +135,12 @@
 		9363D56317944EC600C37DAB /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
 		9363D5661794569500C37DAB /* DLAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAboutWindowController.h; sourceTree = "<group>"; };
 		9363D5671794569500C37DAB /* DLAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAboutWindowController.m; sourceTree = "<group>"; };
+		9378A63217A8F21F00A3DF74 /* Desktop Lyrics for iTunes.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Lyrics for iTunes.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9378A63617A8F21F00A3DF74 /* Desktop Lyrics for iTunes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Desktop Lyrics for iTunes-Info.plist"; sourceTree = "<group>"; };
+		9378A63817A8F21F00A3DF74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9378A63A17A8F21F00A3DF74 /* Desktop Lyrics for iTunes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Desktop Lyrics for iTunes-Prefix.pch"; sourceTree = "<group>"; };
+		9378A64217A8F27000A3DF74 /* PluginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluginController.h; sourceTree = "<group>"; };
+		9378A64317A8F27000A3DF74 /* PluginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluginController.m; sourceTree = "<group>"; };
 		93833D0C1796B9A5000AAE4E /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		9395799D179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBaiduAPIXMLParseOperation.h; sourceTree = "<group>"; };
 		9395799E179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBaiduAPIXMLParseOperation.m; sourceTree = "<group>"; };
@@ -131,6 +174,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9378A62F17A8F21F00A3DF74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9378A63317A8F21F00A3DF74 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93F9F910178324CF00F553B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +290,28 @@
 			name = About;
 			sourceTree = "<group>";
 		};
+		9378A63417A8F21F00A3DF74 /* Desktop Lyrics Plugin for iTunes */ = {
+			isa = PBXGroup;
+			children = (
+				9378A63517A8F21F00A3DF74 /* Supporting Files */,
+				9378A64217A8F27000A3DF74 /* PluginController.h */,
+				9378A64317A8F27000A3DF74 /* PluginController.m */,
+			);
+			name = "Desktop Lyrics Plugin for iTunes";
+			path = "Desktop Lyrics for iTunes";
+			sourceTree = "<group>";
+		};
+		9378A63517A8F21F00A3DF74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9302877D17A9EC750030A331 /* PkgInfo */,
+				9378A63617A8F21F00A3DF74 /* Desktop Lyrics for iTunes-Info.plist */,
+				9378A63717A8F21F00A3DF74 /* InfoPlist.strings */,
+				9378A63A17A8F21F00A3DF74 /* Desktop Lyrics for iTunes-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		93EC4B69178D9F8A00DD5A7B /* CocoaAddtions */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				93F9F91C178324CF00F553B0 /* Desktop Lyrics */,
+				9378A63417A8F21F00A3DF74 /* Desktop Lyrics Plugin for iTunes */,
 				93F9F915178324CF00F553B0 /* Frameworks */,
 				93F9F914178324CF00F553B0 /* Products */,
 			);
@@ -285,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				93F9F913178324CF00F553B0 /* Desktop Lyrics.app */,
+				9378A63217A8F21F00A3DF74 /* Desktop Lyrics for iTunes.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -326,6 +401,7 @@
 		93F9F91D178324CF00F553B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9302878717A9FAF60030A331 /* Desktop Lyrics for iTunes.bundle */,
 				93F9F91E178324CF00F553B0 /* Desktop Lyrics-Info.plist */,
 				93F9F91F178324CF00F553B0 /* InfoPlist.strings */,
 				93F9F922178324CF00F553B0 /* main.m */,
@@ -381,6 +457,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9378A63117A8F21F00A3DF74 /* Desktop Lyrics for iTunes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9378A63D17A8F21F00A3DF74 /* Build configuration list for PBXNativeTarget "Desktop Lyrics for iTunes" */;
+			buildPhases = (
+				9378A62E17A8F21F00A3DF74 /* Sources */,
+				9378A62F17A8F21F00A3DF74 /* Frameworks */,
+				9378A63017A8F21F00A3DF74 /* Resources */,
+				9302878017A9ECBC0030A331 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Desktop Lyrics for iTunes";
+			productName = "Desktop Lyrics for iTunes";
+			productReference = 9378A63217A8F21F00A3DF74 /* Desktop Lyrics for iTunes.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		93F9F912178324CF00F553B0 /* Desktop Lyrics */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93F9F930178324D000F553B0 /* Build configuration list for PBXNativeTarget "Desktop Lyrics" */;
@@ -389,10 +483,12 @@
 				93F9F910178324CF00F553B0 /* Frameworks */,
 				93F9F911178324CF00F553B0 /* Resources */,
 				9352246A178B0008001DE7C4 /* Copy Frameworks */,
+				9302878617A9FA8A0030A331 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9302878517A9F9A50030A331 /* PBXTargetDependency */,
 			);
 			name = "Desktop Lyrics";
 			productName = "Desktop Lyrics";
@@ -421,11 +517,20 @@
 			projectRoot = "";
 			targets = (
 				93F9F912178324CF00F553B0 /* Desktop Lyrics */,
+				9378A63117A8F21F00A3DF74 /* Desktop Lyrics for iTunes */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9378A63017A8F21F00A3DF74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9378A63917A8F21F00A3DF74 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93F9F911178324CF00F553B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,6 +549,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9378A62E17A8F21F00A3DF74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9378A64417A8F27000A3DF74 /* PluginController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93F9F90F178324CF00F553B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -477,7 +590,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9302878517A9F9A50030A331 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9378A63117A8F21F00A3DF74 /* Desktop Lyrics for iTunes */;
+			targetProxy = 9302878417A9F9A50030A331 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		9378A63717A8F21F00A3DF74 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9378A63817A8F21F00A3DF74 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		93F9F91F178324CF00F553B0 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -506,6 +635,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9378A63B17A8F21F00A3DF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CONFIGURATION_BUILD_DIR = build/Debug;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Desktop Lyrics for iTunes/Desktop Lyrics for iTunes-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Desktop Lyrics for iTunes/Desktop Lyrics for iTunes-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				SYMROOT = build;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		9378A63C17A8F21F00A3DF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Desktop Lyrics for iTunes/Desktop Lyrics for iTunes-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Desktop Lyrics for iTunes/Desktop Lyrics for iTunes-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		93F9F92E178324D000F553B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -600,6 +761,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9378A63D17A8F21F00A3DF74 /* Build configuration list for PBXNativeTarget "Desktop Lyrics for iTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9378A63B17A8F21F00A3DF74 /* Debug */,
+				9378A63C17A8F21F00A3DF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		93F9F90E178324CF00F553B0 /* Build configuration list for PBXProject "Desktop Lyrics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
