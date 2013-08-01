@@ -18,6 +18,8 @@
 
 @end
 
+//__attribute__  这个关键字是GCC 编译器对标准的扩展，它用来修饰函数属性，变量属性，类型属性
+//__attribute__ ((constructor)) 所修饰的方法会在 main() 之前执行
 __attribute__ ((constructor))
 static void initialize(){
     NSArray *runningAppList = [NSRunningApplication runningApplicationsWithBundleIdentifier:DESKTOPLYRICSIDENTIFY];
@@ -35,6 +37,7 @@ static void initialize(){
     }
 }
 
+//__attribute__ ((destructor)) 所修饰的方法会在main()执行结束之后执行
 __attribute__ ((destructor))
 static void finalizer() {
     NSArray *runningAppList = [NSRunningApplication runningApplicationsWithBundleIdentifier:DESKTOPLYRICSIDENTIFY];
