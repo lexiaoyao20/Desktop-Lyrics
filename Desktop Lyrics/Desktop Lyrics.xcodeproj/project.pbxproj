@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9302878817A9FAF60030A331 /* Desktop Lyrics for iTunes.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9302878717A9FAF60030A331 /* Desktop Lyrics for iTunes.bundle */; };
 		9302878F17A9FCFD0030A331 /* PkgInfo in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9302877D17A9EC750030A331 /* PkgInfo */; };
 		930F59A6179787DA00F358E1 /* SearchWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930F59A5179787DA00F358E1 /* SearchWindow.xib */; };
 		930F59AA1797890B00F358E1 /* NSImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 930F59A91797890B00F358E1 /* NSImage+Gradient.m */; };
@@ -35,6 +34,8 @@
 		9378A64417A8F27000A3DF74 /* PluginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9378A64317A8F27000A3DF74 /* PluginController.m */; };
 		93833D0D1796B9A5000AAE4E /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 93833D0C1796B9A5000AAE4E /* icon.icns */; };
 		9395799F179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9395799E179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m */; };
+		93B7334D17AA85B70075853F /* Desktop Lyrics for iTunes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93B7334C17AA85B70075853F /* Desktop Lyrics for iTunes.bundle */; };
+		93B7334E17AA85BF0075853F /* Desktop Lyrics for iTunes.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93B7334C17AA85B70075853F /* Desktop Lyrics for iTunes.bundle */; };
 		93D2ECD9178F04B600B5C039 /* VOutTextRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2ECD8178F04B600B5C039 /* VOutTextRender.m */; };
 		93EC4B67178D9A5800DD5A7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC4B66178D9A5800DD5A7B /* QuartzCore.framework */; };
 		93EC4B6C178D9F8A00DD5A7B /* NSColor+CGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC4B6B178D9F8A00DD5A7B /* NSColor+CGColor.m */; };
@@ -52,7 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9302878417A9F9A50030A331 /* PBXContainerItemProxy */ = {
+		93B7334F17AA85CB0075853F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 93F9F90B178324CF00F553B0 /* Project object */;
 			proxyType = 1;
@@ -75,10 +76,10 @@
 		9302878617A9FA8A0030A331 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
+			dstPath = ..;
 			dstSubfolderSpec = 7;
 			files = (
-				9302878817A9FAF60030A331 /* Desktop Lyrics for iTunes.bundle in CopyFiles */,
+				93B7334E17AA85BF0075853F /* Desktop Lyrics for iTunes.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +98,6 @@
 
 /* Begin PBXFileReference section */
 		9302877D17A9EC750030A331 /* PkgInfo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PkgInfo; sourceTree = "<group>"; };
-		9302878717A9FAF60030A331 /* Desktop Lyrics for iTunes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "Desktop Lyrics for iTunes.bundle"; path = "../build/Release/Desktop Lyrics for iTunes.bundle"; sourceTree = "<group>"; };
 		930F59A5179787DA00F358E1 /* SearchWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchWindow.xib; sourceTree = "<group>"; };
 		930F59A81797890B00F358E1 /* NSImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Gradient.h"; sourceTree = "<group>"; };
 		930F59A91797890B00F358E1 /* NSImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Gradient.m"; sourceTree = "<group>"; };
@@ -144,6 +144,7 @@
 		93833D0C1796B9A5000AAE4E /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		9395799D179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBaiduAPIXMLParseOperation.h; sourceTree = "<group>"; };
 		9395799E179056C100E5DC20 /* DLBaiduAPIXMLParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBaiduAPIXMLParseOperation.m; sourceTree = "<group>"; };
+		93B7334C17AA85B70075853F /* Desktop Lyrics for iTunes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "Desktop Lyrics for iTunes.bundle"; path = "build/Desktop Lyrics for iTunes.bundle"; sourceTree = SOURCE_ROOT; };
 		93D2ECD7178F04B600B5C039 /* VOutTextRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOutTextRender.h; sourceTree = "<group>"; };
 		93D2ECD8178F04B600B5C039 /* VOutTextRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOutTextRender.m; sourceTree = "<group>"; };
 		93EC4B66178D9A5800DD5A7B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -304,6 +305,7 @@
 		9378A63517A8F21F00A3DF74 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				93B7334C17AA85B70075853F /* Desktop Lyrics for iTunes.bundle */,
 				9302877D17A9EC750030A331 /* PkgInfo */,
 				9378A63617A8F21F00A3DF74 /* Desktop Lyrics for iTunes-Info.plist */,
 				9378A63717A8F21F00A3DF74 /* InfoPlist.strings */,
@@ -401,7 +403,6 @@
 		93F9F91D178324CF00F553B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9302878717A9FAF60030A331 /* Desktop Lyrics for iTunes.bundle */,
 				93F9F91E178324CF00F553B0 /* Desktop Lyrics-Info.plist */,
 				93F9F91F178324CF00F553B0 /* InfoPlist.strings */,
 				93F9F922178324CF00F553B0 /* main.m */,
@@ -488,7 +489,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9302878517A9F9A50030A331 /* PBXTargetDependency */,
+				93B7335017AA85CB0075853F /* PBXTargetDependency */,
 			);
 			name = "Desktop Lyrics";
 			productName = "Desktop Lyrics";
@@ -543,6 +544,7 @@
 				9363D56417944EC600C37DAB /* About.xib in Resources */,
 				93833D0D1796B9A5000AAE4E /* icon.icns in Resources */,
 				930F59A6179787DA00F358E1 /* SearchWindow.xib in Resources */,
+				93B7334D17AA85B70075853F /* Desktop Lyrics for iTunes.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,10 +593,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9302878517A9F9A50030A331 /* PBXTargetDependency */ = {
+		93B7335017AA85CB0075853F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9378A63117A8F21F00A3DF74 /* Desktop Lyrics for iTunes */;
-			targetProxy = 9302878417A9F9A50030A331 /* PBXContainerItemProxy */;
+			targetProxy = 93B7334F17AA85CB0075853F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -639,7 +641,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CONFIGURATION_BUILD_DIR = build/Debug;
+				CONFIGURATION_BUILD_DIR = build;
+				CONFIGURATION_TEMP_DIR = build;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Desktop Lyrics for iTunes/Desktop Lyrics for iTunes-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -656,6 +659,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CONFIGURATION_BUILD_DIR = build;
+				CONFIGURATION_TEMP_DIR = build;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Desktop Lyrics for iTunes/Desktop Lyrics for iTunes-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -729,13 +734,16 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = build/Debug;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Desktop Lyrics/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Desktop Lyrics/Desktop Lyrics-Prefix.pch";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "Desktop Lyrics/Desktop Lyrics-Info.plist";
+				OBJROOT = build;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -746,13 +754,16 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = build/Release;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Desktop Lyrics/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Desktop Lyrics/Desktop Lyrics-Prefix.pch";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "Desktop Lyrics/Desktop Lyrics-Info.plist";
+				OBJROOT = build;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
