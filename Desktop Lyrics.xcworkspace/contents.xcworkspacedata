@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:DrawGradientText/DrawGradientText.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Desktop Lyrics/Desktop Lyrics.xcodeproj">
    </FileRef>
 </Workspace>

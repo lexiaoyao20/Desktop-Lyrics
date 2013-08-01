@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93206AA817A7EE67001815B8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93206AA717A7EE67001815B8 /* Cocoa.framework */; };
+		93206AB217A7EE67001815B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93206AB017A7EE67001815B8 /* InfoPlist.strings */; };
+		93206AB417A7EE67001815B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93206AB317A7EE67001815B8 /* main.m */; };
+		93206AB817A7EE67001815B8 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 93206AB617A7EE67001815B8 /* Credits.rtf */; };
+		93206ABB17A7EE67001815B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93206ABA17A7EE67001815B8 /* AppDelegate.m */; };
+		93206ABE17A7EE67001815B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93206ABC17A7EE67001815B8 /* MainMenu.xib */; };
+		93206AC617A7EEB8001815B8 /* NSImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 93206AC517A7EEB8001815B8 /* NSImage+Gradient.m */; };
+		93206AC917A7F1B8001815B8 /* MyGradientTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93206AC817A7F1B8001815B8 /* MyGradientTextView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		93206AA417A7EE67001815B8 /* DrawGradientText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawGradientText.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93206AA717A7EE67001815B8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		93206AAA17A7EE67001815B8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		93206AAB17A7EE67001815B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		93206AAC17A7EE67001815B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		93206AAF17A7EE67001815B8 /* DrawGradientText-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrawGradientText-Info.plist"; sourceTree = "<group>"; };
+		93206AB117A7EE67001815B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		93206AB317A7EE67001815B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93206AB517A7EE67001815B8 /* DrawGradientText-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawGradientText-Prefix.pch"; sourceTree = "<group>"; };
+		93206AB717A7EE67001815B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		93206AB917A7EE67001815B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		93206ABA17A7EE67001815B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		93206ABD17A7EE67001815B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		93206AC417A7EEB8001815B8 /* NSImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Gradient.h"; sourceTree = "<group>"; };
+		93206AC517A7EEB8001815B8 /* NSImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Gradient.m"; sourceTree = "<group>"; };
+		93206AC717A7F1B8001815B8 /* MyGradientTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGradientTextView.h; sourceTree = "<group>"; };
+		93206AC817A7F1B8001815B8 /* MyGradientTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyGradientTextView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93206AA117A7EE67001815B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93206AA817A7EE67001815B8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93206A9B17A7EE67001815B8 = {
+			isa = PBXGroup;
+			children = (
+				93206AAD17A7EE67001815B8 /* DrawGradientText */,
+				93206AA617A7EE67001815B8 /* Frameworks */,
+				93206AA517A7EE67001815B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93206AA517A7EE67001815B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93206AA417A7EE67001815B8 /* DrawGradientText.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93206AA617A7EE67001815B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93206AA717A7EE67001815B8 /* Cocoa.framework */,
+				93206AA917A7EE67001815B8 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93206AA917A7EE67001815B8 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93206AAA17A7EE67001815B8 /* AppKit.framework */,
+				93206AAB17A7EE67001815B8 /* CoreData.framework */,
+				93206AAC17A7EE67001815B8 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		93206AAD17A7EE67001815B8 /* DrawGradientText */ = {
+			isa = PBXGroup;
+			children = (
+				93206AC417A7EEB8001815B8 /* NSImage+Gradient.h */,
+				93206AC517A7EEB8001815B8 /* NSImage+Gradient.m */,
+				93206AB917A7EE67001815B8 /* AppDelegate.h */,
+				93206ABA17A7EE67001815B8 /* AppDelegate.m */,
+				93206ABC17A7EE67001815B8 /* MainMenu.xib */,
+				93206AAE17A7EE67001815B8 /* Supporting Files */,
+				93206AC717A7F1B8001815B8 /* MyGradientTextView.h */,
+				93206AC817A7F1B8001815B8 /* MyGradientTextView.m */,
+			);
+			path = DrawGradientText;
+			sourceTree = "<group>";
+		};
+		93206AAE17A7EE67001815B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93206AAF17A7EE67001815B8 /* DrawGradientText-Info.plist */,
+				93206AB017A7EE67001815B8 /* InfoPlist.strings */,
+				93206AB317A7EE67001815B8 /* main.m */,
+				93206AB517A7EE67001815B8 /* DrawGradientText-Prefix.pch */,
+				93206AB617A7EE67001815B8 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93206AA317A7EE67001815B8 /* DrawGradientText */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93206AC117A7EE67001815B8 /* Build configuration list for PBXNativeTarget "DrawGradientText" */;
+			buildPhases = (
+				93206AA017A7EE67001815B8 /* Sources */,
+				93206AA117A7EE67001815B8 /* Frameworks */,
+				93206AA217A7EE67001815B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawGradientText;
+			productName = DrawGradientText;
+			productReference = 93206AA417A7EE67001815B8 /* DrawGradientText.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93206A9C17A7EE67001815B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = subo;
+			};
+			buildConfigurationList = 93206A9F17A7EE67001815B8 /* Build configuration list for PBXProject "DrawGradientText" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 93206A9B17A7EE67001815B8;
+			productRefGroup = 93206AA517A7EE67001815B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93206AA317A7EE67001815B8 /* DrawGradientText */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93206AA217A7EE67001815B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93206AB217A7EE67001815B8 /* InfoPlist.strings in Resources */,
+				93206AB817A7EE67001815B8 /* Credits.rtf in Resources */,
+				93206ABE17A7EE67001815B8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93206AA017A7EE67001815B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93206AB417A7EE67001815B8 /* main.m in Sources */,
+				93206ABB17A7EE67001815B8 /* AppDelegate.m in Sources */,
+				93206AC617A7EEB8001815B8 /* NSImage+Gradient.m in Sources */,
+				93206AC917A7F1B8001815B8 /* MyGradientTextView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		93206AB017A7EE67001815B8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93206AB117A7EE67001815B8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		93206AB617A7EE67001815B8 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93206AB717A7EE67001815B8 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		93206ABC17A7EE67001815B8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93206ABD17A7EE67001815B8 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93206ABF17A7EE67001815B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		93206AC017A7EE67001815B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		93206AC217A7EE67001815B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawGradientText/DrawGradientText-Prefix.pch";
+				INFOPLIST_FILE = "DrawGradientText/DrawGradientText-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		93206AC317A7EE67001815B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawGradientText/DrawGradientText-Prefix.pch";
+				INFOPLIST_FILE = "DrawGradientText/DrawGradientText-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93206A9F17A7EE67001815B8 /* Build configuration list for PBXProject "DrawGradientText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93206ABF17A7EE67001815B8 /* Debug */,
+				93206AC017A7EE67001815B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93206AC117A7EE67001815B8 /* Build configuration list for PBXNativeTarget "DrawGradientText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93206AC217A7EE67001815B8 /* Debug */,
+				93206AC317A7EE67001815B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93206A9C17A7EE67001815B8 /* Project object */;
+}
