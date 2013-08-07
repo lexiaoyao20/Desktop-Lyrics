@@ -107,7 +107,8 @@
 								<object class="NSMenuItem" id="478148435">
 									<reference key="NSMenu" ref="777306784"/>
 									<string key="NSTitle">搜索歌曲...</string>
-									<string key="NSKeyEquiv"/>
+									<string key="NSKeyEquiv">F</string>
+									<int key="NSKeyEquivModMask">1179648</int>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="921552057"/>
 									<reference key="NSMixedImage" ref="223495477"/>

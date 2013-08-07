@@ -42,7 +42,7 @@
 - (void)initWindowSize {
     NSScreen *mainScreen = [NSScreen mainScreen];
     float x = [mainScreen visibleFrame].size.width * 0.1;
-    float y = [mainScreen visibleFrame].origin.y + 10;
+    float y = [mainScreen visibleFrame].origin.y + 20;
     float width = [mainScreen visibleFrame].size.width * 0.8;
     NSRect frame = NSMakeRect(x, y, width, self.window.frame.size.height);
     [self.window setFrame:frame display:YES];

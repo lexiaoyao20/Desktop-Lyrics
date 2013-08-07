@@ -59,22 +59,15 @@ NSString const * GradientColorKey = @"GradientColor";
     
     _textAttributeds = [[NSMutableDictionary alloc] init];
         //Lucida Grande
-    [_textAttributeds setValue:[NSFont fontWithName:@"HelveticaNeue-Bold" size:40] forKey:NSFontAttributeName];
+    [_textAttributeds setValue:[NSFont fontWithName:@"HelveticaNeue-Bold" size:48] forKey:NSFontAttributeName];
     [_textAttributeds setValue:[NSColor greenColor] forKey:NSForegroundColorAttributeName];
-    [_textAttributeds setValue:[NSNumber numberWithFloat:-1] forKey:NSStrokeWidthAttributeName];//轮廓宽度
+    [_textAttributeds setValue:[NSNumber numberWithFloat:-0.1] forKey:NSStrokeWidthAttributeName];//轮廓宽度
     [_textAttributeds setValue:[NSColor blackColor] forKey:NSStrokeColorAttributeName];//轮廓颜色
-    
-//    NSShadow *shadow = [[NSShadow alloc] init];
-//    [shadow setShadowColor:[NSColor blackColor]];
-//    [shadow setShadowOffset:NSMakeSize(1, 1)];
-//    [shadow setShadowBlurRadius:1];
-//    [_textAttributeds setValue:shadow forKey:NSShadowAttributeName];
-//    SafeReleaseObj(shadow);
     
     NSShadow *shadow = [[NSShadow alloc] init];
 	[shadow setShadowColor: [NSColor blackColor]];
-	[shadow setShadowBlurRadius: 1];
-	[shadow setShadowOffset: NSMakeSize( 0, -1)];
+	[shadow setShadowBlurRadius: 1.5];
+	[shadow setShadowOffset: NSMakeSize( -1.5, 1.5)];
     [_textAttributeds setValue:shadow forKey:NSShadowAttributeName];
     SafeReleaseObj(shadow);
     
@@ -111,9 +104,10 @@ NSString const * GradientColorKey = @"GradientColor";
 - (NSSize)caculateRepSize {
     
     // force text layout
-    [_layoutManager glyphRangeForTextContainer:_textContainer];
-    
-	return NSIntegralRect([_layoutManager usedRectForTextContainer:_textContainer]).size;
+//    [_layoutManager glyphRangeForTextContainer:_textContainer];
+//    
+//	return NSIntegralRect([_layoutManager usedRectForTextContainer:_textContainer]).size;
+    return [_content sizeWithAttributes:_textAttributeds];
 }
 
 - (NSBitmapImageRep *)createRep:(NSSize)repSize {
@@ -190,9 +184,9 @@ NSString const * GradientColorKey = @"GradientColor";
     
     @synchronized (@"VOutTextRender_Rendering") {
         
-        [self updateTextContent:context];
-        
-        [_textStorage addLayoutManager:_layoutManager];
+//        [self updateTextContent:context];
+//        
+//        [_textStorage addLayoutManager:_layoutManager];
         
         imageSize = [self caculateRepSize];
         

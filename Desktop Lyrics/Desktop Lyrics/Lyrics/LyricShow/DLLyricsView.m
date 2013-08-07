@@ -49,6 +49,10 @@
 
 - (void)drawRect:(NSRect)rectangle
 {
+    if (_lyricString == nil || [_lyricString isEqualToString:@""]) {
+        return;
+    }
+    
     float   t;
     CGRect  cg = CGRectMake(NSMinX(rectangle), NSMinY(rectangle),
                             NSWidth(rectangle), NSHeight(rectangle));
@@ -137,15 +141,23 @@
     if (lyric == nil) {
         lyric = @"";
     }
+    lyric = [lyric stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+//    lyric = [lyric stringByReplacingOccurrencesOfString:@"\n" withString:@"" options:0 range:NSMakeRange([lyric length] - 1, 1)];
+    
     [lyric retain];
     [_lyricString release];
     _lyricString = lyric;
     
     [_textRender setValue:self.lyricForegroundColor forKey:NSForegroundColorAttributeName];
-    NSArray *colorArray = [NSArray arrayWithObjects:[NSColor colorWithDeviceRed:127/255.0 green:255/255.0 blue:0 alpha:1.0],
-                                                    [NSColor colorWithDeviceRed:50/255.0 green:205/255.0 blue:50/255.0 alpha:1.0],
-                           [NSColor colorWithDeviceRed:0 green:1 blue:0 alpha:1],
-                                                      [NSColor colorWithDeviceRed:34/255.0 green:139/255.0 blue:34/255.0 alpha:1.0],nil];
+//    NSArray *colorArray = [NSArray arrayWithObjects:[NSColor colorWithDeviceRed:127/255.0 green:255/255.0 blue:0 alpha:1.0],
+//                                                    [NSColor colorWithDeviceRed:50/255.0 green:205/255.0 blue:50/255.0 alpha:1.0],
+//                           [NSColor colorWithDeviceRed:0 green:1 blue:0 alpha:1],
+//                                                      [NSColor colorWithDeviceRed:34/255.0 green:139/255.0 blue:34/255.0 alpha:1.0],nil];
+    NSArray *colorArray = [NSArray arrayWithObjects:[NSColor colorWithDeviceRed:56/255.0 green:135/255.0 blue:18/255.0 alpha:1],
+                           
+                           [NSColor colorWithDeviceRed:65/255.0 green:179/255.0 blue:0 alpha:1],
+                           [NSColor colorWithDeviceRed:162/255.0 green:225/255.0 blue:78/255.0 alpha:1],
+                           nil];
                            
     [_textRender setGradientColorArray:colorArray];
     NSData *imageDate = [[_textRender render:_lyricString] TIFFRepresentation];
