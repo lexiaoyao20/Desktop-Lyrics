@@ -61,12 +61,12 @@ NSString const * GradientColorKey = @"GradientColor";
         //Lucida Grande
     [_textAttributeds setValue:[NSFont fontWithName:@"HelveticaNeue-Bold" size:48] forKey:NSFontAttributeName];
     [_textAttributeds setValue:[NSColor greenColor] forKey:NSForegroundColorAttributeName];
-    [_textAttributeds setValue:[NSNumber numberWithFloat:-0.1] forKey:NSStrokeWidthAttributeName];//轮廓宽度
+    [_textAttributeds setValue:[NSNumber numberWithFloat:-0.4] forKey:NSStrokeWidthAttributeName];//轮廓宽度
     [_textAttributeds setValue:[NSColor blackColor] forKey:NSStrokeColorAttributeName];//轮廓颜色
     
     NSShadow *shadow = [[NSShadow alloc] init];
 	[shadow setShadowColor: [NSColor blackColor]];
-	[shadow setShadowBlurRadius: 1.5];
+	[shadow setShadowBlurRadius: 2];
 	[shadow setShadowOffset: NSMakeSize( -1.5, 1.5)];
     [_textAttributeds setValue:shadow forKey:NSShadowAttributeName];
     SafeReleaseObj(shadow);
@@ -161,8 +161,7 @@ NSString const * GradientColorKey = @"GradientColor";
             [transform concat];
 //            
 //            [_layoutManager drawGlyphsForGlyphRange:glyphRange atPoint:NSZeroPoint];
-            [_content drawInRect:NSMakeRect(0, 0, pixelsWide, pixelsHigh) withAttributes:_textAttributeds];
-                        
+            [_content drawAtPoint:NSMakePoint(0, 0) withAttributes:_textAttributeds];
             [NSGraphicsContext restoreGraphicsState];            
         }
         
